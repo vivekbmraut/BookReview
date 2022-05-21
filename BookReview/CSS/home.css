@@ -150,7 +150,7 @@ body{
         padding:2rem;
         border-radius:.5rem;
         background:#fff;
-        text-align:center;
+       
 
     }
         .header .login-form.active{
@@ -184,9 +184,9 @@ body{
 
     }
 
-        .header .login-form p a{
-             color:var(--orange);
-             text-decoration:underline;
-
+        .header .login-form p a {
+            color: var(--orange);
+            text-decoration: underline;
         }
+
         

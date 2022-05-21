@@ -67,8 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HtmlPage1.html" />
+    <Content Include="CSS\register.css" />
+    <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
+    <Content Include="html\Registration.html" />
     <Content Include="JS\script.js" />
     <Content Include="Web.config" />
     <Content Include="Register.aspx" />
