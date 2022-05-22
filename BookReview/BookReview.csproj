@@ -70,19 +70,18 @@
     <Content Include="CSS\register.css" />
     <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
-    <Content Include="html\Registration.html" />
-    <Content Include="html\registerpage.aspx" />
+    <Content Include="html\registerPage.aspx" />
     <Content Include="JS\script.js" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="html\registerpage.aspx.cs">
-      <DependentUpon>registerpage.aspx</DependentUpon>
+    <Compile Include="html\registerPage.aspx.cs">
+      <DependentUpon>registerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\registerpage.aspx.designer.cs">
-      <DependentUpon>registerpage.aspx</DependentUpon>
+    <Compile Include="html\registerPage.aspx.designer.cs">
+      <DependentUpon>registerPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registeration.aspx.cs">
