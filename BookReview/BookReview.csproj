@@ -70,8 +70,6 @@
     <Content Include="CSS\register.css" />
     <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
-    <Content Include="html\HtmlPage2.html" />
-    <Content Include="html\Registration.html" />
     <Content Include="html\registerpage.aspx" />
     <Content Include="Images\book1.jpg" />
     <Content Include="JS\script.js" />
