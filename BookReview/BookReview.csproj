@@ -79,12 +79,12 @@
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="html\registerpage.aspx.cs">
-      <DependentUpon>registerpage.aspx</DependentUpon>
+    <Compile Include="html\registerPage.aspx.cs">
+      <DependentUpon>registerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html\registerpage.aspx.designer.cs">
-      <DependentUpon>registerpage.aspx</DependentUpon>
+    <Compile Include="html\registerPage.aspx.designer.cs">
+      <DependentUpon>registerPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registeration.aspx.cs">

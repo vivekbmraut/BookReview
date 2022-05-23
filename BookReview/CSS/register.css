@@ -52,9 +52,8 @@ body {
 
 .registration-form {
     position:fixed;
-    top:9rem;
-    left:55rem;
-    right:20rem;
+    top:10%;
+    left:35%;
     width: 40rem;
     height:55rem;
     box-shadow: var(--box-shadow);
@@ -89,4 +88,12 @@ body {
         text-transform: none;
         align-items: center;
     }
-   
+
+@media screen and (max-width: 650px) {
+
+    .registration-form {
+        width: 70%;
+        left:20%;
+
+    }
+}
