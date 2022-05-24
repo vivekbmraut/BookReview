@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\Home.html" />
     <Content Include="admin\loginAdmin.aspx" />
+    <Content Include="admin\Home.css" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\register.css" />
     <Content Include="html\HtmlPage1.html" />
