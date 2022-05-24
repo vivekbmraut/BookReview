@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\register.css" />
+    <Content Include="html\bookHome.aspx" />
     <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
     <Content Include="html\registerpage.aspx" />
@@ -77,6 +78,20 @@
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bookMain.Master.cs">
+      <DependentUpon>bookMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookMain.Master.designer.cs">
+      <DependentUpon>bookMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="html\bookHome.aspx.cs">
+      <DependentUpon>bookHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html\bookHome.aspx.designer.cs">
+      <DependentUpon>bookHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="html\registerPage.aspx.cs">
       <DependentUpon>registerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -94,6 +109,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bookMain.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

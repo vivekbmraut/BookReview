@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="bookMain.Master.cs" Inherits="BookReview.HomeBook" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="/css/home.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-book-open"></i>eBookReviews</a>
+
+
+        <nav class="navbar">
+            <a href="#">Add Book</a>
+            <a href="#">Categories</a>
+            <a href="#">Feedback</a>
+        </nav>
+
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-bars" id="bar"></div>
+            <div class="fas fa-book-reader" id="menu_btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+        <form  class="search-form" action="#" >
+            <input type="search" id="search-box" placeholder="search here..." />
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <asp:ContentPlaceHolder ID="guestOrReviewer" runat="server">
+
+        </asp:ContentPlaceHolder>
+        
+
+    </header>
+
+
+        
+    <asp:ContentPlaceHolder ID="middle" runat="server">
+    </asp:ContentPlaceHolder>
+        
+
+
+    <section class="footer1" style="color:orange">
+            <div class="box-container">
+                <div class="box">
+                    <h3 style:"color">eBookReviews<i class="fas fa-book-open"></i></h3>
+                    <div class="share">
+                        <i class="fab fa-facebook-f"></i> 
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+
+                    </div>
+                </div>
+
+                    <div class="box">
+                        <h3>Contact Info</h3>                  
+                            <a href="#" class="links"><i class="fas fa-phone"></i> +91 9548484814</a>
+                            <a href="#" class="links"><i class="fas fa-envelope"></i> bookreview@gmail.com</a>
+                            <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> Pune india - 411017</a>
+                    </div>
+            </div>
+
+        </section>
+
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>  
