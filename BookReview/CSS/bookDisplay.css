@@ -32,7 +32,7 @@
 .summary{
     padding-top:1.2%;
     font-size:1.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform:none;
 }
 
 .general{
@@ -54,10 +54,16 @@
    padding:3%;
 }
 
-.review{
-    box-shadow:var(--box-shadow);
-    padding-bottom:4px;
-}
+    .review-section .review:hover{
+        padding-left:.5rem;
+        padding-top:.5rem;
+
+    }
+
+    .review {
+        box-shadow: var(--box-shadow);
+        padding-bottom: 4px;
+    }
 .review p{
     font-size:1.5rem;
 }
