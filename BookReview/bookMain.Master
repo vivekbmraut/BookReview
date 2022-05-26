@@ -8,7 +8,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width", initial-scale="1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="/css/home.css" rel="stylesheet" />
+    <link href="/CSS/bookMain.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

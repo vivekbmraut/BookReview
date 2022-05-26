@@ -68,12 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\bookDisplay.css" />
+    <Content Include="CSS\bookHome.css" />
+    <Content Include="CSS\bookMain.css" />
     <Content Include="CSS\register.css" />
     <Content Include="CSS\cards.css" />
     <Content Include="temps\bookDisplay.html" />
     <Content Include="html\bookHome.aspx" />
     <Content Include="temps\HtmlPage1.html" />
-    <Content Include="CSS\home.css" />
     <Content Include="html\registerpage.aspx" />
     <Content Include="html\bookDetails.aspx" />
     <Content Include="Images\book1.jpg" />
