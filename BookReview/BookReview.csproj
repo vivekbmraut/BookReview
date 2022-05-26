@@ -70,11 +70,13 @@
     <Content Include="admin\Home.html" />
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\Home.css" />
+    <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\register.css" />
     <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
     <Content Include="html\registerPage.aspx" />
+    <Content Include="JS\adminHome.js" />
     <Content Include="JS\script.js" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />

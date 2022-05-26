@@ -8,14 +8,31 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><i class="fa-solid fa-user-shield"></i>eBookReviews</a>
+        <a href="#" class="logo"><i class="fa-solid fa-user-shield"></i>eBookReviews<span>&lt;Admin&gt;</span></a>
         <nav class="navbar">
             <a href="#Admins">Admins</a>
             <a href="#Books">Books</a>
-            <a href="#Reviews">Reviews</a>
+            <a href="#Reviews">Users</a>
         </nav>
-    </header>
+        <div class="icons">
+            <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>
+            <div class="fa-solid fa-user" id="details"></div>
+        </div>
 
-    <script src="./home.js"></script>
+        <form action="/" method="get" class="search-form">
+            <input type="search" id="search-box" placeholder="search admin by name" />
+            <label for="search-box" class=" fa-solid fa-magnifying-glass"></label>
+        </form>
+
+        <div class="profile">
+            <img src="./profilePictures/photo.jpg" alt="Avatar" class="avatar" id="pic"/>
+            <h4 id="adminName">Vivek Raut</h4>
+            <a href="#"><div class="view-profile">View Profile</div></a>
+            <button>Logout</button>
+        </div>
+    
+    </header>
+    
+    <script src="../JS/adminHome.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     --orange: #ff7800;
     --black: #130f40;
     --light-color: #666;
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
     --border: 2rem solid rgba(0,0,0,.1);
     --outline: .1rem solid rgba(0,0,0,.1);
     --outline-hover: .2rem solid var(--black);
@@ -40,7 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 2rem 4%;
     background: #fff;
     box-shadow: var(--box-shadow);
 }
@@ -50,3 +50,145 @@ body {
     font-weight: bolder;
     color: var(--black);
 }
+
+.header .logo i{
+    color: var(--orange);
+}
+
+
+.header .logo span{
+    font-size:1.5rem;
+    color:red;
+}
+
+.header .navbar a{
+    font-size:1.7rem;
+    margin:0 2.5rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background:var(--orange);
+    color:#ffffff;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 110%;
+    right:-110%;
+    max-width: 50rem;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label {
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: var(--orange);
+}
+
+.header .profile{
+    position:absolute;
+    top:110%;
+    right:-110%;
+    width:20rem;
+    box-shadow:var(--box-shadow);
+    padding:2rem 0 0 0;
+    border-radius:.5rem;
+    background:#fff;
+    text-align:center;
+}
+
+.header .profile.active{
+    right:2rem;
+    transition: .2s linear;
+}
+
+.header .profile .avatar {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header .profile h4{
+    font-size:1.4rem;
+    text-transform:uppercase;
+    color:var(--black);
+}
+
+.header .profile .view-profile {
+    font-size: 2rem;
+    margin-top:1rem;
+    color: var(--black);
+}
+
+.header .profile .view-profile:hover {
+    color:#fff;
+    background: var(--orange);
+    transition-delay:5ms;
+}
+
+.header .profile button{
+    font-size:2rem;
+    margin:2rem;
+    padding:5px 8px 5px 8px;
+    border-radius:1rem;
+    cursor:pointer;
+}
+.header .profile button {
+    font-size: 2rem;
+    margin: 1.5rem;
+    padding: 5px 8px 5px 8px;
+    background:#fff;
+    border:2px solid var(--black);
+    cursor: pointer;
+}
+.header .profile button:hover{
+    background:var(--orange);
+    color:#fff;
+    border:2px solid #fff;
+}
+
