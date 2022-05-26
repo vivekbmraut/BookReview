@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="CSS\bookDisplay.css" />
     <Content Include="CSS\register.css" />
+    <Content Include="CSS\cards.css" />
     <Content Include="html\bookDisplay.html" />
     <Content Include="html\bookHome.aspx" />
     <Content Include="html\HtmlPage1.html" />
@@ -76,6 +77,11 @@
     <Content Include="html\registerpage.aspx" />
     <Content Include="html\bookDetails.aspx" />
     <Content Include="Images\book1.jpg" />
+    <Content Include="Images\book1test.jpg" />
+    <Content Include="Images\book1u2-1.jpg" />
+    <Content Include="Images\book2.jpg" />
+    <Content Include="Images\book3.jpg" />
+    <Content Include="Images\book4.jpg" />
     <Content Include="Images\Scala.jpg" />
     <Content Include="JS\script.js" />
     <Content Include="Web.config" />
