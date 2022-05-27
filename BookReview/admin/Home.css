@@ -192,3 +192,59 @@ body {
     border:2px solid #fff;
 }
 
+
+
+.footer1 {
+    background: #fff;
+}
+
+.footer1 .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 25rem;
+}
+
+.footer1 .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1 rem 0;
+}
+
+.footer1 .box-container .box h3 i {
+    font-size:3rem;
+    padding-left:1rem;
+    color: var(--orange);
+}
+
+
+.footer1 .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer1 .box-container .box a i {
+    color: var(--orange);
+    padding-right: .5rem;
+}
+
+.footer1 .box-container .box a:hover i {
+    padding-right: 2rem;
+    font-size:1.8rem;
+}
+
+.footer1 .box-container .box .share   {
+font-size: 2rem;
+color:var(--light-color)
+}
+.footer1 .box-container .box .share i{
+    padding-right:1rem;
+}
+
+.footer1 .box-container .box .share i:hover {
+    padding-right: 2rem;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
