@@ -12,10 +12,11 @@
 <body>
     <form id="adminForm" runat="server" class="login-form" action="#">
         <h3><i class="fas fa-user-shield"></i>Admin</h3>
-        <input type="text" placeholder="Email" class="box" id="email_input" runat="server" enabled="False" />
-        
-        <input type="password" placeholder="Password" class="box" />
-        <input type="submit" value="Log In" class="btn" runat="server"/> 
+        <input type="text" placeholder="Email" id="EmailInput" class="box" runat="server" required/>
+        <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email Id" ControlToValidate="EmailInput" CssClass="validator"  runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+        <input type="password" placeholder="Password" id="PasswordInput" class="box" runat="server" required/>
+        <asp:RegularExpressionValidator ErrorMessage="Password Length should be Mininmun 6 and Max length 15" ControlToValidate="PasswordInput" CssClass="pass-validator"  runat="server" ValidationExpression="[\w@!#]{6,15}" />
+        <asp:Button Text="Login" CssClass="btn"  runat="server" />  
     </form>
 </body>
 </html>

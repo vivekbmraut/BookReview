@@ -24,21 +24,21 @@ namespace BookReview.admin
         protected global::System.Web.UI.HtmlControls.HtmlForm adminForm;
 
         /// <summary>
-        /// email_input control.
+        /// EmailInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText email_input;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText EmailInput;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// PasswordInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-       
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordInput;
     }
 }

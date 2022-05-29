@@ -37,7 +37,7 @@ body {
     font-size:4rem;
     font-weight: bolder;
     color: var(--orange);
-    padding: .7rem;
+    padding: .7rem .7rem 5rem .7rem;
 
 }
 
@@ -63,7 +63,7 @@ body {
 
 .login-form .box {
     width: 70%;
-    margin: 2rem 5.5rem;
+    margin: 0.5rem 5.5rem 0 5.5rem ;
     background: #eee;
     font-size: 1.5rem;
     color: var(--black);
@@ -74,7 +74,7 @@ body {
 }
 
 .login-form .btn {
-    margin: 2.1rem 10.8rem;
+    margin: 2.1rem 10.8rem 0 12rem;
     display: inline-block;
     padding: .8rem 3rem;
     font-size: 1.7rem;
@@ -82,6 +82,21 @@ body {
     border: .1rem solid var(--black);
     color: var(--black);
     cursor: pointer;
+}
+
+.validator {
+    margin: 0.5rem 5.5rem 0 5.5rem;
+    font-size:1.5rem;
+    color:red;
+    font-style:italic;
+    display:block;
+}
+.pass-validator {
+    margin: 0.5rem 5.5rem 0 5.5rem;
+    font-size: 1.2rem;
+    color: red;
+    font-style: italic;
+    display: block;
 }
 
 @media screen and (max-width: 650px) {
