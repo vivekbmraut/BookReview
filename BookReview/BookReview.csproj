@@ -78,9 +78,7 @@
     <Content Include="CSS\bookHome.css" />
     <Content Include="CSS\bookMain.css" />
     <Content Include="CSS\register.css" />
-    <Content Include="html\HtmlPage1.html" />
     <Content Include="CSS\home.css" />
-    <Content Include="html\registerPage.aspx" />
     <Content Include="JS\adminHome.js" />
     <Content Include="CSS\cards.css" />
     <Content Include="user\registerPage.aspx" />
