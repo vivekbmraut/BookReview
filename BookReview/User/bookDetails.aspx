@@ -2,8 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/bookDisplay.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="guestOrReviewer" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
     <div class="about-book">
         <div class="book-cover">

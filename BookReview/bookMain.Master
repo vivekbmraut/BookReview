@@ -18,7 +18,6 @@
 
 
         <nav class="navbar">
-             <a href="#" id="book">Book</a>
             <a href="#">Add Book</a>
             <a href="#">Categories</a>
             <a href="#">Feedback</a>
@@ -27,18 +26,21 @@
 
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-bars" id="bar"></div>
-            <div class="fas fa-book-reader" id="menu_btn"></div>
             <div class="fas fa-user" id="login-btn"></div>
         </div>
         <form  class="search-form" action="#" >
-            <input type="search" id="search-box" placeholder="search here..." />
+            <input type="search" id="search-box" placeholder="search Book" />
             <label for="search-box" class="fas fa-search"></label>
         </form>
 
-        <asp:ContentPlaceHolder ID="guestOrReviewer" runat="server">
+        <form action="#" class="login-form" >
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="enter your email" />
+            <input type="password" class="box" placeholder="enter password" />
+            <input type="submit" value="login now"  class="btn"/>
+            <p> don't have an account' <a href="./registerpage.aspx">create now</a></p>
 
-        </asp:ContentPlaceHolder>
+        </form>
         
 
     </header>
