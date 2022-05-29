@@ -67,10 +67,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\adminView.aspx" />
+    <Content Include="admin\Home.html" />
+    <Content Include="admin\loginAdmin.aspx" />
+    <Content Include="admin\Home.css" />
+    <Content Include="admin\profilePictures\photo.jpg" />
+    <Content Include="CSS\adminHome.css" />
+    <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\bookDisplay.css" />
     <Content Include="CSS\bookHome.css" />
     <Content Include="CSS\bookMain.css" />
     <Content Include="CSS\register.css" />
+    <Content Include="html\HtmlPage1.html" />
+    <Content Include="CSS\home.css" />
+    <Content Include="html\registerPage.aspx" />
+    <Content Include="JS\adminHome.js" />
     <Content Include="CSS\cards.css" />
     <Content Include="user\registerPage.aspx" />
     <Content Include="temps\bookDisplay.html" />
@@ -90,6 +101,28 @@
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\adminHome.Master.cs">
+      <DependentUpon>adminHome.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminHome.Master.designer.cs">
+      <DependentUpon>adminHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminView.aspx.cs">
+      <DependentUpon>adminView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminView.aspx.designer.cs">
+      <DependentUpon>adminView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\loginAdmin.aspx.cs">
+      <DependentUpon>loginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\loginAdmin.aspx.designer.cs">
+      <DependentUpon>loginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html\registerPage.aspx.cs">
     <Compile Include="bookMain.Master.cs">
       <DependentUpon>bookMain.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,6 +168,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\adminHome.Master" />
     <Content Include="bookMain.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
