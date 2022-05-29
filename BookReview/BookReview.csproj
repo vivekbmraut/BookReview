@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\adminView.aspx" />
     <Content Include="admin\Home.html" />
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\Home.css" />
     <Content Include="admin\profilePictures\photo.jpg" />
+    <Content Include="CSS\adminHome.css" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\register.css" />
     <Content Include="html\HtmlPage1.html" />
@@ -82,6 +84,20 @@
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\adminHome.Master.cs">
+      <DependentUpon>adminHome.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminHome.Master.designer.cs">
+      <DependentUpon>adminHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminView.aspx.cs">
+      <DependentUpon>adminView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminView.aspx.designer.cs">
+      <DependentUpon>adminView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\loginAdmin.aspx.cs">
       <DependentUpon>loginAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +122,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\adminHome.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
