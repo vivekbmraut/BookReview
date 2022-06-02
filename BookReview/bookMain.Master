@@ -18,6 +18,7 @@
 
 
         <nav class="navbar">
+             <a href="/user/bookhome.aspx">Home</a>
             <a href="#">Add Book</a>
             <a href="/user/category.aspx">Categories</a>
             <a href="#">Feedback</a>
