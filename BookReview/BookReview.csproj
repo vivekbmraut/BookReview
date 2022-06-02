@@ -68,9 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\adminView.aspx" />
-    <Content Include="admin\Home.html" />
     <Content Include="admin\loginAdmin.aspx" />
-    <Content Include="admin\Home.css" />
     <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="CSS\adminHome.css" />
     <Content Include="CSS\loginAdmin.css" />
