@@ -19,7 +19,7 @@
 
         <nav class="navbar">
             <a href="#">Add Book</a>
-            <a href="#">Categories</a>
+            <a href="/user/category.aspx">Categories</a>
             <a href="#">Feedback</a>
         </nav>
 
@@ -49,6 +49,9 @@
         
     <asp:ContentPlaceHolder ID="middle" runat="server">
     </asp:ContentPlaceHolder>
+     <asp:ContentPlaceHolder ID="middleCategory" runat="server">
+    </asp:ContentPlaceHolder>
+
         
 
 

@@ -78,6 +78,11 @@
     <Content Include="CSS\bookHome.css" />
     <Content Include="CSS\bookMain.css" />
     <Content Include="CSS\register.css" />
+    <Content Include="CSS\category.css" />
+    <Content Include="Images\category2.jpg" />
+    <Content Include="Images\category3.jpg" />
+    <Content Include="Images\category4.jpg" />
+    <Content Include="Images\category5.jfif" />
     <Content Include="JS\adminHome.js" />
     <Content Include="CSS\cards.css" />
     <Content Include="user\registerPage.aspx" />
@@ -93,6 +98,7 @@
     <Content Include="Images\book4.jpg" />
     <Content Include="Images\Scala.jpg" />
     <Content Include="JS\script.js" />
+    <Content Include="user\category.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
   </ItemGroup>
@@ -153,6 +159,13 @@
     </Compile>
     <Compile Include="Registeration.aspx.designer.cs">
       <DependentUpon>Registeration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
