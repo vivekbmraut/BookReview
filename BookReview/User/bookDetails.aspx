@@ -66,4 +66,15 @@
         </div>
 
     </div>
+    <div class="r-section">
+      <div class="r-form">
+      <form action="#" runat="server">
+        <asp:TextBox CssClass="give-review" TextMode="MultiLine" Rows="5" Columns="50" runat="server"></asp:TextBox><br/>
+        <asp:Button type="submit" CssClass="r-btn" runat="server" Text="Post Review"/><span class="warn">Should be Logged in to write review</span>
+      </form >
+      </div>
+      <div class="r-note">
+        <p>Our Website provides total Freedom of Speech in review section feel free to write what you experienced while reading this particular book. Kindly avoid posting any advertisements in the review section surely its sure to get blocked.</p>
+      </div>
+    </div>
 </asp:Content>
