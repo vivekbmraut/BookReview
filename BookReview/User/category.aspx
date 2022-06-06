@@ -3,7 +3,7 @@
      <link href="../CSS/category.css" rel="stylesheet" />
 </asp:Content>
 
-<asp:Content ID="Content4" ContentPlaceHolderID="middlecategory" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="middle" runat="server">
     
 <div class="category">
             <div class="box">

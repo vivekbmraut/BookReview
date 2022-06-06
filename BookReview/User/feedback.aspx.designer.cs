@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookReview
+namespace BookReview.user
 {
 
 
-    public partial class HomeBook
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// head control.
+        /// NameInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText NameInput;
 
         /// <summary>
-        /// middle control.
+        /// EmailInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder middle;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl EmailInput;
     }
 }
