@@ -72,6 +72,7 @@ section {
     font-size: 3rem;
     font-weight: bolder;
     color: var(--black);
+    text-transform:none;
 }
 
     .header .logo i {
@@ -177,6 +178,19 @@ section {
     border-radius: .5rem;
     padding: 1rem;
     text-transform: none;
+}
+.email-validator {
+    font-size: 1.2rem;
+    color: red;
+    font-style: italic;
+    display: block;
+}
+
+.pass-valid {
+    font-size: 1.2rem;
+    color: red;
+    font-style: italic;
+    display: block;
 }
 
 .header .login-form p {

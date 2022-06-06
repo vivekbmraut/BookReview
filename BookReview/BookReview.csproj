@@ -82,7 +82,6 @@
     <Content Include="Images\category4.jpg" />
     <Content Include="Images\category5.jfif" />
     <Content Include="JS\adminHome.js" />
-    <Content Include="CSS\cards.css" />
     <Content Include="user\registerPage.aspx" />
     <Content Include="temps\bookDisplay.html" />
     <Content Include="user\bookHome.aspx" />

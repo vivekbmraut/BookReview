@@ -41,36 +41,39 @@
             <p>
                 Good Book Read it later
             </p>
-            <h4>25/06/2022</h4>
+            <span>25/06/2022</span> 
         </div>
         <div class="review">
             <h2>Vivek Raut</h2>
             <p>
                 Good Book Read it later
             </p>
-            <h4>25/06/2022</h4>
+            <span>25/06/2022</span>
+        </div>
+        <div class="review">
+            <h2>Vivek Raut</h2>
+            <p>
+                Good Book Read it later
+                Written for experienced Java, C++, or C# programmers who are new to Scala or functional programming, Scala for the Impatient, Second Edition, introduces the key Scala concepts and techniques you need in order to be productive quickly. It is the perfect introduction to the language, particularly for impatient readers who want to learn the fundamentals of Scala so they can start coding quickly. It doesn’t attempt to exhaustively list all the features of the language or make you suffer through long and contrived examples. Instead, carefully crafted examples and hands-on activities guide you through well-defined stages of competency, from basic to expert
+            </p>
+            <span>25/06/2022</span>
         </div>
         <div class="review">
             <h2>Vivek Raut</h2>
             <p>
                 Good Book Read it later
             </p>
-            <h4>25/06/2022</h4>
-        </div>
-        <div class="review">
-            <h2>Vivek Raut</h2>
-            <p>
-                Good Book Read it later
-            </p>
-            <h4>25/06/2022</h4>
+            <span>25/06/2022</span>
+            <a href="#" class="edit-review-btn">Edit</a>
+            <a href="#" class="delt-review-btn">Delete</a>
         </div>
 
     </div>
     <div class="r-section">
       <div class="r-form">
-      <form action="#" runat="server">
-        <asp:TextBox CssClass="give-review" TextMode="MultiLine" Rows="5" Columns="50" runat="server"></asp:TextBox><br/>
-        <asp:Button type="submit" CssClass="r-btn" runat="server" Text="Post Review"/><span class="warn">Should be Logged in to write review</span>
+      <form action="#" method="post">
+        <textarea class="give-review" rows="5" cols="50" required></textarea><br/>
+        <button type="submit" class="r-btn">Post Review</button><span class="warn">Should be Logged in to write review</span>
       </form >
       </div>
       <div class="r-note">

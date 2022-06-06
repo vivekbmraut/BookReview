@@ -14,7 +14,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"><i class="fas fa-book-open"></i>eBookReviews</a>
+        <a href="./bookHome.aspx" class="logo"><i class="fas fa-book-open"></i>eBookReviews</a>
 
 
         <nav class="navbar">
@@ -34,11 +34,13 @@
             <label for="search-box" class="fas fa-search"></label>
         </form>
 
-        <form action="#" class="login-form" >
+        <form action="#" class="login-form" runat="server">
             <h3>Login</h3>
-            <input type="email" class="box" placeholder="enter your email" />
-            <input type="password" class="box" placeholder="enter password" />
-            <input type="submit" value="login now"  class="btn"/>
+            <input type="email" id="EmailInput" class="box" placeholder="enter your email" runat="server" required />
+            <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email Id" ControlToValidate="EmailInput" CssClass="email-validator"  runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"/>
+            <input type="password" class="box" id="PasswordInput" placeholder="enter password" runat="server" required />
+            <asp:RegularExpressionValidator ErrorMessage="Password Length Min 6 Max 15" ControlToValidate="PasswordInput" CssClass="pass-valid"  runat="server" ValidationExpression="[\w@!#]{6,15}" Display="Dynamic" />
+            <asp:Button Text="login now"  CssClass="btn" runat="server"/>
             <p> don't have an account' <a href="./registerpage.aspx">create now</a></p>
 
         </form>

@@ -58,8 +58,7 @@
 }
 
 .review-section .review:hover {
-    padding-left: .5rem;
-    padding-top: .5rem;
+    background:#d9d9d9;
 }
 
 .review {
@@ -75,6 +74,38 @@
 .review h2 {
     padding: 5px 0 15px 2px;
 }
+
+.edit-review-btn{
+    margin-left:40%;
+    padding:0 10px 0 10px;
+    font-size:1.6rem;
+    border-radius:4px;
+    color:#fff;
+    background:var(--orange);
+}
+
+.edit-review-btn:hover {
+    color:#000;
+    background:#fff;
+    border:1px solid var(--orange);
+}
+
+.delt-review-btn {
+    margin-left: 2%;
+    padding: 0 2px 0 2px;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--orange);
+}
+
+.delt-review-btn:hover {
+    color: #000;
+    background: #fff;
+    border: 1px solid var(--orange);
+}
+
+
 
 .r-section {
     display: flex;
@@ -103,11 +134,11 @@
     padding: 2px;
 }
 
-    .r-btn:hover {
-        background: #fff;
-        color: #000;
-        border: 2px solid var(--orange);
-    }
+.r-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid var(--orange);
+}
 
 .r-note {
     padding-left: 15px;
