@@ -71,6 +71,7 @@
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="CSS\adminHome.css" />
+    <Content Include="CSS\feedback.css" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\bookDisplay.css" />
     <Content Include="CSS\bookHome.css" />
@@ -96,6 +97,7 @@
     <Content Include="Images\Scala.jpg" />
     <Content Include="JS\script.js" />
     <Content Include="user\category.aspx" />
+    <Content Include="user\feedback.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
   </ItemGroup>
@@ -163,6 +165,13 @@
     </Compile>
     <Compile Include="user\category.aspx.designer.cs">
       <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
