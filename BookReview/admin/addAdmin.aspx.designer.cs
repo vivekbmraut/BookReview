@@ -15,13 +15,22 @@ namespace BookReview.admin
     {
 
         /// <summary>
+        /// NameInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText NameInput;
+
+        /// <summary>
         /// EmailInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText EmailInput;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl EmailInput;
 
         /// <summary>
         /// PasswordInput control.
@@ -31,5 +40,14 @@ namespace BookReview.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword PasswordInput;
+
+        /// <summary>
+        /// ConfirmPasswordInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword ConfirmPasswordInput;
     }
 }

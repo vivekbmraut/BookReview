@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="addAdmin.aspx.cs" Inherits="BookReview.admin.addAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../CSS/addAdmin.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="searchAny" runat="server">
 <form action="/" method="get" class="search-form">
@@ -8,12 +9,16 @@
 </form>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
-    <form id="addAdmin" runat="server" class="adminform" action="addAdmin.aspx">
+    <form id="addAdmin" runat="server" class="admin-form" action="addAdmin.aspx">
         <h3><i class="fas fa-user-shield"></i>Add Admin</h3>
-        <input type="text" placeholder="Email" id="EmailInput" class="box" runat="server" required/>
-        <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email Id" ControlToValidate="EmailInput" CssClass="validator"  runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
-        <input type="password" placeholder="Password" id="PasswordInput" class="box" runat="server" required/>
-        <asp:RegularExpressionValidator ErrorMessage="Password Length should be Mininmun 6 and Max length 15" ControlToValidate="PasswordInput" CssClass="pass-validator"  runat="server" ValidationExpression="[\w@!#]{6,15}" />
-        <asp:Button Text="Login" CssClass="btn"  runat="server" />  
+        <input type="text" placeholder="Enter Name" id="NameInput" class="box" runat="server" required/>
+            <asp:RegularExpressionValidator ErrorMessage="Enter name with only alphabets" ControlToValidate="NameInput" ValidationExpression="[a-zA-Z\s]+" runat="server" />
+        <input type="email" placeholder="Enter email id" id="EmailInput" class="box" runat="server" required/>
+            <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email Id" ControlToValidate="EmailInput" CssClass="validator"  runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+        <input type="password" placeholder="enter password" id="PasswordInput" class="box" runat="server" required/>
+            <asp:RegularExpressionValidator ErrorMessage="Password Length should be Mininmun 6 and Max length 15" ControlToValidate="PasswordInput" CssClass="pass-validator"  runat="server" ValidationExpression="[\w@!#]{6,15}" />
+        <input type="password" placeholder="Confirm Password" id="ConfirmPasswordInput" class="box" runat="server" required/>
+            <asp:CompareValidator ErrorMessage="Password does not match with above" ControlToValidate="ConfirmPasswordInput" ControlToCompare="PasswordInput" runat="server" />
+        <asp:Button Text="ADD" CssClass="btn"  runat="server" />  
     </form>
 </asp:Content>
