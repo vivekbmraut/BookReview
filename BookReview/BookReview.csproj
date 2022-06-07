@@ -71,6 +71,7 @@
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="CSS\adminHome.css" />
+    <Content Include="CSS\adminView.css" />
     <Content Include="CSS\feedback.css" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\bookDisplay.css" />

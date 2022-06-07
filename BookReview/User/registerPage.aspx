@@ -5,7 +5,6 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
-    <div>
         <form id="userRegisterForm" action="#" class="registration-form" runat="server">
         <h3>Register here<i class="fas fa-user-plus"></i></h3>
         <input type="text" placeholder="Enter Name" id="NameInput" class="box" runat="server" required/>
@@ -18,5 +17,4 @@
             <asp:CompareValidator ErrorMessage="Password does not match with above" ControlToValidate="ConfirmPasswordInput" ControlToCompare="PasswordInput" runat="server" />
         <asp:Button Text="Submit" CssClass="btn" runat="server" />
     </form>
-    </div>
 </asp:Content> 

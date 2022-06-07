@@ -16,7 +16,7 @@
     <header class="header">
         <a href="#" class="logo"><i class="fa-solid fa-user-shield"></i>eBookReviews<span>&lt;Admin&gt;</span></a>
         <nav class="navbar">
-            <a href="#Admins">Admins</a>
+            <a href="adminView.aspx" id="admin-tab">Admins</a>
             <a href="#Books">Books</a>
             <a href="#Reviews">Users</a>
         </nav>
@@ -25,10 +25,9 @@
             <div class="fa-solid fa-user" id="details"></div>
         </div>
 
-        <form action="/" method="get" class="search-form">
-            <input type="search" id="search-box" placeholder="search admin by name" />
-            <label for="search-box" class=" fa-solid fa-magnifying-glass"></label>
-        </form>
+        <asp:ContentPlaceHolder ID="searchAny" runat="server">
+
+        </asp:ContentPlaceHolder>
 
         <div class="profile">
             <img src="./profilePictures/photo.jpg" alt="Avatar" class="avatar" id="pic" />

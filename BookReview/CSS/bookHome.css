@@ -22,7 +22,6 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
     grid-template-rows: repeat(auto-fit, minmax(30rem,1fr));
     gap: 1rem;
-    ;
 }
 
 .book .box {
@@ -35,8 +34,8 @@
     text-align: center;
 }
 
-    .book .box h3 {
-        color: var(--black);
-        line-height: 1.8;
-        font-size: 1.5rem;
-    }
+.book .box h3 {
+    color: var(--black);
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
