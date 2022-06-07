@@ -73,6 +73,7 @@
     <Content Include="CSS\adminHome.css" />
     <Content Include="CSS\adminView.css" />
     <Content Include="CSS\feedback.css" />
+    <Content Include="CSS\login.css" />
     <Content Include="CSS\loginAdmin.css" />
     <Content Include="CSS\bookDisplay.css" />
     <Content Include="CSS\bookHome.css" />
@@ -84,6 +85,7 @@
     <Content Include="Images\category4.jpg" />
     <Content Include="Images\category5.jfif" />
     <Content Include="JS\adminHome.js" />
+    <Content Include="user\login.aspx" />
     <Content Include="user\registerPage.aspx" />
     <Content Include="temps\bookDisplay.html" />
     <Content Include="user\bookHome.aspx" />
@@ -137,6 +139,13 @@
     </Compile>
     <Compile Include="user\bookHome.aspx.designer.cs">
       <DependentUpon>bookHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\registerPage.aspx.cs">
       <DependentUpon>registerPage.aspx</DependentUpon>
