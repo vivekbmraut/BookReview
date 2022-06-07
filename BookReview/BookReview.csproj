@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\addAdmin.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\profilePictures\photo.jpg" />
@@ -103,6 +104,13 @@
     <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\addAdmin.aspx.cs">
+      <DependentUpon>addAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addAdmin.aspx.designer.cs">
+      <DependentUpon>addAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\adminHome.Master.cs">
       <DependentUpon>adminHome.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
