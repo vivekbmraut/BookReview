@@ -82,10 +82,16 @@
     <Content Include="CSS\bookMain.css" />
     <Content Include="CSS\register.css" />
     <Content Include="CSS\category.css" />
+    <Content Include="Images\category1.jpg" />
+    <Content Include="Images\category10.jpg" />
     <Content Include="Images\category2.jpg" />
     <Content Include="Images\category3.jpg" />
     <Content Include="Images\category4.jpg" />
     <Content Include="Images\category5.jfif" />
+    <Content Include="Images\category6.jfif" />
+    <Content Include="Images\category7.jpg" />
+    <Content Include="Images\category8.jpg" />
+    <Content Include="Images\category9.png" />
     <Content Include="JS\adminHome.js" />
     <Content Include="user\login.aspx" />
     <Content Include="user\registerPage.aspx" />
