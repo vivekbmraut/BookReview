@@ -44,7 +44,7 @@
         <div class="btn-section">
           <a href="#" class="ad-btns"> Edit</a><a href="#" class="ad-btns"> Delete</a></div>
         </div>
-        <a href=#><div class="admin-card"><i class="fa-solid fa-circle-plus"></i><h2>Add Admin</h2></div></a>
+        <a href="addAdmin.aspx"><div class="admin-card"><i class="fa-solid fa-circle-plus"></i><h2>Add Admin</h2></div></a>
     </div>
 </asp:Content>
 
