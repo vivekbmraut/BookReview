@@ -1,0 +1,198 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --border: 2rem solid rgba(0,0,0,.1);
+    --outline: .1rem solid rgba(0,0,0,.1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+.about-book {
+    margin: 3%;
+    margin-top: 120px;
+    box-shadow: var(--box-shadow);
+}
+
+.book-cover {
+    float: left;
+}
+
+.name {
+    font-size: 4rem;
+}
+
+.author {
+    font-size: 1.5rem;
+}
+
+.book-desc {
+    padding-left: 23%;
+}
+
+.summary {
+    padding-top: 1.2%;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+.general {
+    padding-top: 50px;
+}
+
+.book-property {
+    font-size: 1.6rem;
+    color: rgb(85, 85, 85);
+}
+
+.property-value {
+    color: var(--black);
+}
+
+
+.review-section {
+    /*margin-top:30px;*/
+    padding: 3%;
+}
+
+    .review-section .review:hover {
+        background: #d9d9d9;
+    }
+
+.review {
+    box-shadow: var(--box-shadow);
+    padding-bottom: 4px;
+}
+
+    .review p {
+        font-size: 1.5rem;
+        text-transform: none;
+    }
+
+    .review h2 {
+        padding: 5px 0 15px 2px;
+    }
+
+.edit-review-btn {
+    margin-left: 40%;
+    padding: 0 10px 0 10px;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--orange);
+}
+
+    .edit-review-btn:hover {
+        color: #000;
+        background: #fff;
+        border: 1px solid var(--orange);
+    }
+
+.delt-review-btn {
+    margin-left: 2%;
+    padding: 0 2px 0 2px;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--orange);
+}
+
+    .delt-review-btn:hover {
+        color: #000;
+        background: #fff;
+        border: 1px solid var(--orange);
+    }
+
+
+
+.r-section {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.give-review {
+    resize: vertical;
+    width: 90%;
+    font-size: 15px;
+    border: 1px solid;
+}
+
+.r-form {
+    width: 65%;
+}
+
+.r-btn {
+    margin-top: 10px;
+    font-size: 1.2em;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 2px;
+}
+
+    .r-btn:hover {
+        background: #fff;
+        color: #000;
+        border: 2px solid var(--orange);
+    }
+
+.r-note {
+    padding-left: 15px;
+    border-left: 2px solid var(--orange);
+    height: 180px;
+    width: 35%;
+    font-size: 1.5rem;
+}
+
+    .r-note p {
+        text-transform: none;
+    }
+
+.warn {
+    font-size: 1.3rem;
+    text-transform: none;
+    margin: 9px;
+}
+
+.editbtns {
+   
+}
+
+    .editbtns .btngrp {
+        
+       margin-left:4rem;
+        
+    }
+        .editbtns .btngrp a{
+            margin-left: 1rem;
+        }
+
+         .btn {
+            margin-top: 0rem;
+            display: inline-block;
+            padding: .8rem 3rem;
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            border: .1rem solid var(--black);
+            color: var(--black);
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                background: var(--orange);
+                color: #fff;
+            }
+
+          .review a{
+              margin-right:2%;
+             
+          }
+.review a i{
+    margin-left:.5rem;
+}
+
+           

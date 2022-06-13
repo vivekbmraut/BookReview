@@ -17,7 +17,7 @@
         <a href="#" class="logo"><i class="fa-solid fa-user-shield"></i>eBookReviews<span>&lt;Admin&gt;</span></a>
         <nav class="navbar">
             <a href="adminView.aspx" id="admin-tab">Admins</a>
-            <a href="#Books">Books</a>
+            <a href="editBooks.aspx">Books</a>
             <a href="#Reviews">Users</a>
         </nav>
         <div class="icons">

@@ -69,12 +69,16 @@
   <ItemGroup>
     <Content Include="admin\addAdmin.aspx" />
     <Content Include="admin\adminView.aspx" />
+    <Content Include="admin\bookDetailsAdmin.aspx" />
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\profilePictures\photo.jpg" />
+    <Content Include="admin\editBooks.aspx" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
     <Content Include="CSS\adminHome.css" />
     <Content Include="CSS\adminView.css" />
+    <Content Include="CSS\bookDetailsAdmin.css" />
+    <Content Include="CSS\editbooks.css" />
     <Content Include="CSS\feedback.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\loginAdmin.css" />
@@ -140,12 +144,26 @@
     <Compile Include="admin\adminView.aspx.designer.cs">
       <DependentUpon>adminView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\bookDetailsAdmin.aspx.cs">
+      <DependentUpon>bookDetailsAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bookDetailsAdmin.aspx.designer.cs">
+      <DependentUpon>bookDetailsAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\loginAdmin.aspx.cs">
       <DependentUpon>loginAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\loginAdmin.aspx.designer.cs">
       <DependentUpon>loginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\editBooks.aspx.cs">
+      <DependentUpon>editBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\editBooks.aspx.designer.cs">
+      <DependentUpon>editBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="bookMain.Master.cs">
       <DependentUpon>bookMain.Master</DependentUpon>
