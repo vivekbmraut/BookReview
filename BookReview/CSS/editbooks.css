@@ -1,4 +1,8 @@
-﻿
+﻿#book-tab {
+    background: var(--orange);
+    border-radius: 4px;
+    color: #fff;
+}
 .heading {
     margin-top:10rem;
     text-align: center;
@@ -7,13 +11,13 @@
     color: var(--black);
 }
 
-    .heading span {
-        background: var(--orange);
-        color: #fff;
-        display: inline-block;
-        padding: .5rem 3rem;
-        clip-path: polygon( 100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0% );
-    }
+.heading span {
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon( 100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0% );
+}
 
 .book {
   
@@ -23,33 +27,33 @@
     gap: 1rem;
 }
 
-    .book .box {
-        margin: 0 1rem;
-        padding: 3rem 2rem;
-        background: #fff;
-        border: var(--border);
-        box-shadow: var(--box-shadow);
-        border-radius: .5rem;
-        text-align: center;
-    }
-
-        .book .box h3 {
-            color: var(--black);
-            line-height: 1.8;
-            font-size: 1.5rem;
-        }
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    padding: .8rem 3rem;
-    font-size: 1.7rem;
-    border-radius: .5rem;
-    border: .1rem solid var(--black);
-    color: var(--black);
-    cursor: pointer;
+.book .box {
+margin: 0 1rem;
+padding: 3rem 2rem;
+background: #fff;
+border: var(--border);
+box-shadow: var(--box-shadow);
+border-radius: .5rem;
+text-align: center;
 }
 
-    .btn:hover {
-        background: var(--orange);
-        color: #fff;
-    }
+.book .box h3 {
+    color: var(--black);
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+.btn {
+margin-top: 1rem;
+display: inline-block;
+padding: .8rem 3rem;
+font-size: 1.7rem;
+border-radius: .5rem;
+border: .1rem solid var(--black);
+color: var(--black);
+cursor: pointer;
+}
+
+.btn:hover {
+background: var(--orange);
+color: #fff;
+}

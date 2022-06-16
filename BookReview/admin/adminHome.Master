@@ -17,8 +17,8 @@
         <a href="#" class="logo"><i class="fa-solid fa-user-shield"></i>eBookReviews<span>&lt;Admin&gt;</span></a>
         <nav class="navbar">
             <a href="adminView.aspx" id="admin-tab">Admins</a>
-            <a href="editBooks.aspx">Books</a>
-            <a href="#Reviews">Users</a>
+            <a href="editBooks.aspx"  id="book-tab">Books</a>
+            <a href="userView.aspx" id="user-tab">Users</a>
         </nav>
         <div class="icons">
             <div class="fa-solid fa-magnifying-glass" id="search-btn"></div>

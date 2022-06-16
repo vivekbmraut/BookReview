@@ -18,10 +18,10 @@
 
 
         <nav class="navbar">
-             <a href="/user/bookhome.aspx">Home</a>
-            <a href="#">Add Book</a>
-            <a href="/user/category.aspx">Categories</a>
-            <a href="/user/feedback.aspx">Feedback</a>
+             <a href="./bookhome.aspx">Home</a>
+            <a href="./addBook.aspx">Add Book</a>
+            <a href="./category.aspx">Categories</a>
+            <a href="./feedback.aspx">Feedback</a>
         </nav>
 
 

@@ -19,7 +19,7 @@
       </div>
       <div class="description">
         <label>Description</label>
-        <asp:TextBox TextMode="MultiLine" Rows="5" Columns="65" runat="server"></asp:TextBox>
+        <asp:TextBox TextMode="MultiLine" CssClass="desc" Rows="5" Columns="65" runat="server"></asp:TextBox>
       </div>
       <div class="year">
         <label>Publish Year</label>

@@ -13,11 +13,17 @@
 .about-book {
     margin: 3%;
     margin-top: 120px;
+    border-radius:10px;
     box-shadow: var(--box-shadow);
+    display:flex;
 }
 
 .book-cover {
-    float: left;
+  
+  padding:20px;
+}
+.book-cover img{
+     width:200px;
 }
 
 .name {
@@ -29,7 +35,6 @@
 }
 
 .book-desc {
-    padding-left: 23%;
 }
 
 .summary {
@@ -63,7 +68,9 @@
 
 .review {
     box-shadow: var(--box-shadow);
-    padding-bottom: 4px;
+    border-radius:7px;
+    padding:5px;
+    margin-bottom:20px;
 }
 
 .review p {
@@ -72,37 +79,32 @@
 }
 
 .review h2 {
-    padding: 5px 0 15px 2px;
+    padding: 5px 0 9px 2px;
+}
+.date{
+    font-style:italic;
+    font-weight:bold;
 }
 
-.edit-review-btn{
-    margin-left:40%;
+.r-btns{
+
+    margin-left:80%;
+}
+
+.rcntl-btn{
+    margin-left:2%;
     padding:0 10px 0 10px;
     font-size:1.6rem;
     border-radius:4px;
+    border:1px solid var(--orange);
     color:#fff;
     background:var(--orange);
 }
 
-.edit-review-btn:hover {
+.rcntl-btn:hover {
     color:#000;
     background:#fff;
     border:1px solid var(--orange);
-}
-
-.delt-review-btn {
-    margin-left: 2%;
-    padding: 0 2px 0 2px;
-    font-size: 1.6rem;
-    border-radius: 4px;
-    color: #fff;
-    background: var(--orange);
-}
-
-.delt-review-btn:hover {
-    color: #000;
-    background: #fff;
-    border: 1px solid var(--orange);
 }
 
 

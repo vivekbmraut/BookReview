@@ -8,7 +8,7 @@
       <div class="profile-picture" style="background-image:url(./profilePictures/default.png)">
       </div>
       <div class="edit-pic">
-        <form id="form1" runat="server">
+        <form id="imageChange" runat="server">
             <asp:FileUpload ID="imgFileUpload" ClientIDMode="Static" CssClass="file-upload" runat="server" Text="Choose File" />
             <label for="imgFileUpload" class="chose-btn">Change image</label><br />
             <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />

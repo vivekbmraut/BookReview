@@ -7,13 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace BookReview.admin
 {
-    public partial class bookDetailsAdmin : System.Web.UI.Page
+    public partial class userView : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-        protected void btnUpload_Click(object sender, EventArgs e)
         {
 
         }
