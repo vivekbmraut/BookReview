@@ -73,6 +73,9 @@
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="admin\editBooks.aspx" />
+    <Content Include="admin\userBooks.aspx" />
+    <Content Include="admin\userProfileView.aspx" />
+    <Content Include="admin\userReviews.aspx" />
     <Content Include="admin\userView.aspx" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
@@ -167,6 +170,27 @@
     </Compile>
     <Compile Include="admin\editBooks.aspx.designer.cs">
       <DependentUpon>editBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\userBooks.aspx.cs">
+      <DependentUpon>userBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\userBooks.aspx.designer.cs">
+      <DependentUpon>userBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\userProfileView.aspx.cs">
+      <DependentUpon>userProfileView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\userProfileView.aspx.designer.cs">
+      <DependentUpon>userProfileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\userReviews.aspx.cs">
+      <DependentUpon>userReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\userReviews.aspx.designer.cs">
+      <DependentUpon>userReviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\userView.aspx.cs">
       <DependentUpon>userView.aspx</DependentUpon>
