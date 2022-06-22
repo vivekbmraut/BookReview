@@ -9,10 +9,10 @@
     cursor: pointer;
 }
 
-    .btn:hover {
-        background: var(--orange);
-        color: #fff;
-    }
+.btn:hover {
+    background: var(--orange);
+    color: #fff;
+}
 
 .login-form {
     margin-top: 10rem;

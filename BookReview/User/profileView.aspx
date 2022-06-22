@@ -22,7 +22,7 @@
       Blocked Reviews:<span>2</span>
     </div>
       <a href="#"><div class="ed-link">View Reviews</div></a>
-      <a href="#"><div class="ed-link">View Books</div></a>
+      <a href="MyBooks.aspx"><div class="ed-link">View Books</div></a>
       
     </div>
     <script src="../JS/profileView.js"></script>

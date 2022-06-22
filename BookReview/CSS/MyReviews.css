@@ -13,7 +13,9 @@
     padding: .5rem 3rem;
     clip-path: polygon( 100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0% );
 }
+
 .review-section {
+    /*margin-top:30px;*/
     padding: 3%;
 }
 
@@ -60,29 +62,4 @@
     color:#000;
     background:#fff;
     border:1px solid var(--orange);
-}
-
-
-.btngrp{
-    margin-left:35%;
-}
-
-.btngrp a {
-    margin-left: 1rem;
-}
-
-.btngrp .btn {
-    margin-top: 0rem;
-    display: inline-block;
-    padding: .8rem 3rem;
-    font-size: 1.7rem;
-    border-radius: .5rem;
-    border: .1rem solid var(--black);
-    color: var(--black);
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: var(--orange);
-    color: #fff;
 }

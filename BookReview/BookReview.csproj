@@ -77,6 +77,7 @@
     <Content Include="admin\userProfileView.aspx" />
     <Content Include="admin\userReviews.aspx" />
     <Content Include="admin\userView.aspx" />
+    <Content Include="bookCovers\default-cover.png" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
     <Content Include="CSS\adminHome.css" />
@@ -90,6 +91,7 @@
     <Content Include="CSS\bookDisplay.css" />
     <Content Include="CSS\bookHome.css" />
     <Content Include="CSS\bookMain.css" />
+    <Content Include="CSS\MyReviews.css" />
     <Content Include="CSS\profileView.css" />
     <Content Include="CSS\register.css" />
     <Content Include="CSS\category.css" />
@@ -110,6 +112,8 @@
     <Content Include="JS\profileView.js" />
     <Content Include="user\addBook.aspx" />
     <Content Include="user\login.aspx" />
+    <Content Include="user\MyBooks.aspx" />
+    <Content Include="user\MyReviews.aspx" />
     <Content Include="user\profilePictures\default.png" />
     <Content Include="user\profileView.aspx" />
     <Content Include="user\registerPage.aspx" />
@@ -229,6 +233,20 @@
     </Compile>
     <Compile Include="user\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\MyBooks.aspx.cs">
+      <DependentUpon>MyBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\MyBooks.aspx.designer.cs">
+      <DependentUpon>MyBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\MyReviews.aspx.cs">
+      <DependentUpon>MyReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\MyReviews.aspx.designer.cs">
+      <DependentUpon>MyReviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\profileView.aspx.cs">
       <DependentUpon>profileView.aspx</DependentUpon>
