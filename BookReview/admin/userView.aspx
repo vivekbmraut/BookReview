@@ -17,7 +17,7 @@
         <div class="ad-email">p@gmail.com</div>
         <div  class="review"><span class="comment"><i class="fa-solid fa-message"></i>3</span> <span class="block"><i class="fa-solid fa-circle-xmark" ></i>2</span></div>
         <div class="btn-section">
-          <a href="#" class="ad-btns">View</a></div>
+          <a href="userProfileView.aspx" class="ad-btns">View</a></div>
         </div>
       <div class="admin-card">
       <div class="profile-image" style="background-image: url(https://live.staticflickr.com/5023/5675214515_7046fbaf88_b.jpg);">

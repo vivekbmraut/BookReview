@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="searchAny" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
-    <h1 class="heading">Edit <span>books</span></h1>
+    <h1 class="heading">Edit <span class="ribbon">books</span></h1>
         <div class="book">
             
             <div class="box">
@@ -55,7 +55,6 @@
                 <h3>Book Name</h3>
                 <a href="#" class="btn">View</a>
             </div>
-        </div>
         </div>
 
 

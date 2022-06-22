@@ -82,6 +82,7 @@
     <Content Include="CSS\adminHome.css" />
     <Content Include="CSS\adminView.css" />
     <Content Include="CSS\bookDetailsAdmin.css" />
+    <Content Include="CSS\coverUpload.css" />
     <Content Include="CSS\editbooks.css" />
     <Content Include="CSS\feedback.css" />
     <Content Include="CSS\login.css" />
@@ -92,6 +93,7 @@
     <Content Include="CSS\profileView.css" />
     <Content Include="CSS\register.css" />
     <Content Include="CSS\category.css" />
+    <Content Include="CSS\userReviews.css" />
     <Content Include="CSS\userView.css" />
     <Content Include="Images\category1.jpg" />
     <Content Include="Images\category10.jpg" />
@@ -125,6 +127,7 @@
     <Content Include="JS\script.js" />
     <Content Include="user\category.aspx" />
     <Content Include="user\feedback.aspx" />
+    <Content Include="user\uploadBookCover.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
   </ItemGroup>
@@ -269,6 +272,13 @@
     </Compile>
     <Compile Include="user\feedback.aspx.designer.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\uploadBookCover.aspx.cs">
+      <DependentUpon>uploadBookCover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\uploadBookCover.aspx.designer.cs">
+      <DependentUpon>uploadBookCover.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

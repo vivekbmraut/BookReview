@@ -9,10 +9,10 @@
         <div class="book-cover">
             <img src="../Images/Scala.jpg" class="book-img"/>
             <form id="form1" runat="server">
-            <asp:FileUpload ID="imgFileUpload" ClientIDMode="Static" CssClass="file-upload" runat="server" Text="Choose File" />
-            <label for="imgFileUpload" class="chose-btn">Change cover</label><br />
-            <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />
-        </form>
+                <asp:FileUpload ID="imgFileUpload" ClientIDMode="Static" CssClass="file-upload" runat="server" Text="Choose File" />
+                <label for="imgFileUpload" class="chose-btn">Change cover</label><br />
+                <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />
+            </form>
         </div>
         <div class="book-desc">
             <h2 class="name">Scala for the Impatient </h2>

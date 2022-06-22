@@ -11,7 +11,7 @@
     color: var(--black);
 }
 
-.heading span {
+.heading .ribbon {
     background: var(--orange);
     color: #fff;
     display: inline-block;
