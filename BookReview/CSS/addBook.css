@@ -49,6 +49,11 @@
 	border-radius:5px;
 }
 
+.req-validator{
+	font-size:1.7rem;
+	color:red;
+	font-style:italic;
+}
 
 .book-details .sbt-btn{
   grid-column:1/3;

@@ -8,27 +8,28 @@
     
     <div class="book-details">
         <div class="flogo"><i class="fa-solid fa-book"></i>Add Book</div>
-       <form name="formBook" action="#" runat="server">
+     <form name="formBook" action="addBook.aspx" runat="server">
       <div class="title">
         <label>Title</label>
-        <input type="text" name="title">
+        <input type="text" name="title" required>
       </div>
       <div class="author">
         <label>Author</label>
-        <input type="text" name="author">
+        <input type="text" name="author" required>
       </div>
       <div class="description">
         <label>Description</label>
-        <asp:TextBox TextMode="MultiLine" CssClass="desc" Rows="5" Columns="65" runat="server"></asp:TextBox>
+        <asp:TextBox TextMode="MultiLine" ID="bookDesc" CssClass="desc" Rows="5" Columns="65" runat="server"></asp:TextBox>
+          <asp:RequiredFieldValidator ErrorMessage="Description Required" CssClass="req-validator" ControlToValidate="bookDesc" Display="Dynamic" runat="server" />
       </div>
       <div class="year">
         <label>Publish Year</label>
         <input type="text" name="year">
       </div>
       <div class="categories">
-        <label>Categories</label>
+        <label>Category</label>
         <select name="categories" id="categories">
-            <option value="other">Other</option>
+            <option value="Other">Other</option>
             <option value="Horror">Horror</option>
             <option value="Novel">Novel</option>
             <option value="Action">Action</option>
@@ -42,7 +43,7 @@
       </div>
       <div class="edition">
         <label>Edition</label>
-        <input type="number" name="edition">
+        <input type="number" name="edition" required>
       </div>
       <div class="publisher">
         <label>Publisher</label>

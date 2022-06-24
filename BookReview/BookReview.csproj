@@ -85,6 +85,7 @@
     <Content Include="CSS\bookDetailsAdmin.css" />
     <Content Include="CSS\coverUpload.css" />
     <Content Include="CSS\editbooks.css" />
+    <Content Include="CSS\editReview.css" />
     <Content Include="CSS\feedback.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\loginAdmin.css" />
@@ -111,6 +112,8 @@
     <Content Include="JS\bookDetailsAdmin.js" />
     <Content Include="JS\profileView.js" />
     <Content Include="user\addBook.aspx" />
+    <Content Include="user\categorizedBooks.aspx" />
+    <Content Include="user\editReview.aspx" />
     <Content Include="user\login.aspx" />
     <Content Include="user\MyBooks.aspx" />
     <Content Include="user\MyReviews.aspx" />
@@ -226,6 +229,20 @@
     </Compile>
     <Compile Include="user\bookHome.aspx.designer.cs">
       <DependentUpon>bookHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\categorizedBooks.aspx.cs">
+      <DependentUpon>categorizedBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\categorizedBooks.aspx.designer.cs">
+      <DependentUpon>categorizedBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\editReview.aspx.cs">
+      <DependentUpon>editReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\editReview.aspx.designer.cs">
+      <DependentUpon>editReview.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

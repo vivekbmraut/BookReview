@@ -35,10 +35,10 @@ body {
 
 
 
-    .btn:hover {
-        background: var(--orange);
-        color: #fff;
-    }
+.btn:hover {
+    background: var(--orange);
+    color: #fff;
+}
 
 .feedback-form {
     margin-top: 10rem;
@@ -53,12 +53,12 @@ body {
     justify-content: center;
 }
 
-    .feedback-form h3 {
-        font-size: 2.5rem;
-        text-transform: none;
-        color: var(--black);
-        text-align: center;
-    }
+.feedback-form h3 {
+    font-size: 2.5rem;
+    text-transform: none;
+    color: var(--black);
+    text-align: center;
+}
 .feedback-form i {
     font-size: 4rem;
     font-weight: bolder;
@@ -89,5 +89,4 @@ body {
     color: var(--black);
     cursor: pointer;
 }
-
 

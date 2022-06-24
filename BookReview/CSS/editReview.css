@@ -1,0 +1,61 @@
+﻿.flogo {
+	font-size: 3rem;
+	font-weight: bolder;
+	color: var(--black);
+	margin:120px 35% 0 35%;
+	text-transform: none;
+}
+.flogo i{
+	color: var(--orange);
+}
+.r-section {
+    display: flex;
+    margin:20px 0 120px 0;
+    padding: 20px;
+}
+
+
+.give-review {
+    resize: vertical;
+    width: 90%;
+    font-size: 15px;
+    border:1px solid ;
+}
+
+.r-form {
+    width: 65%;
+}
+
+.r-btn {
+    margin-top: 10px;
+    font-size: 1.2em;
+    background: var(--orange);
+    color: #fff;
+    border: 2px solid var(--orange);
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 2px;
+}
+
+.r-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 2px solid var(--orange);
+    cursor:pointer;
+}
+
+.r-note {
+    padding-left: 15px;
+    border-left: 2px solid var(--orange);
+    height: 180px;
+    width: 35%;
+    font-size: 1.5rem;
+}
+.r-note p{
+    text-transform:none;
+}
+
+.warn {
+    font-size: 1.3rem;
+    text-transform: none;
+    margin: 9px;
