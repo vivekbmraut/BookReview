@@ -30,9 +30,10 @@
         </asp:ContentPlaceHolder>
 
         <div class="profile">
-            <img src="./profilePictures/photo.jpg" alt="Avatar" class="avatar" id="pic" />
-            <h4 id="adminName">Vivek Raut</h4>
-            <button>Logout</button>
+            <img src="./profilePictures/default.png" alt="Avatar" class="avatar" id="profilePic" runat="server"/>
+            <h4 id="adminName" runat="server">Admin Name</h4>
+            <a href="adminProfileView.aspx"><div class="view-profile">View Profile</div></a>
+            <a href="logout.aspx"><div class="lgt-btn">Logout</div></a>
         </div>
     </header>
 

@@ -1,0 +1,82 @@
+﻿.heading {
+    margin-top: 10rem;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.heading .ribbon {
+    background: var(--orange);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon( 100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0% );
+}
+
+.whole-div{
+  width:300px;
+  height:430px;
+  margin:0 60% 80px 40%;
+  text-align:center;
+}
+
+.profile-picture{
+  margin:8px 32%;
+  width:100px;
+  height:100px;
+  background-size: cover;
+  background-position: center;
+  border:2px solid black;
+  border-radius:20px;
+}
+.chose-btn{
+  font-size:2rem;
+  border:1px solid black;
+  border-radius:10px;
+  padding:0 2px;
+}
+.chose-btn:hover{
+  background:var(--orange);
+  color:#fff;
+  border:1px solid orange;
+  cursor:pointer;
+}
+.edit-pic{
+    margin-bottom:4px;
+}
+.save-btn{
+  font-size:1.5rem;
+  background:var(--orange);
+  border:1px solid var(--orange);
+  border-radius:4px;
+  color:#fff;
+  margin:10px;
+  padding:0 10px;
+  display:none;
+}
+.save-btn:hover{
+    background:#fff;
+    border:1px solid black;
+    color:#000; 
+    cursor:pointer;
+}
+
+.info-div {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    padding: 4px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 20px 2px black;
+    border-radius: 10px;
+}
+.details{
+  font-size:1.9rem;
+  text-transform:none;
+  font-weight:bold;
+}
+.file-upload{
+    display:none;
+}
+

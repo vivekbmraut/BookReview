@@ -11,7 +11,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
-    <div class="admin-container">
+    <div class="admin-container" id="adminCardContainer" runat="server">
       <div class="admin-card">
       <div class="profile-image" style="background-image: url(https://cdn.shopify.com/s/files/1/0253/8956/3978/files/passport_photo_Kristina_Pimenova.jpg?v=1592285068);">
         </div>

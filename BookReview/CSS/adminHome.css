@@ -171,22 +171,18 @@ body {
     transition-delay:5ms;
 }
 
-.header .profile button{
-    font-size:2rem;
-    margin:2rem;
-    padding:5px 8px 5px 8px;
-    border-radius:1rem;
-    cursor:pointer;
-}
-.header .profile button {
+
+.header .profile .lgt-btn {
     font-size: 2rem;
-    margin: 1.5rem;
-    padding: 5px 8px 5px 8px;
+    margin: 1.5rem 4rem;
+    padding:5px 0;
+    color:var(--black);
     background:#fff;
     border:2px solid var(--black);
+    border-radius:1rem;
     cursor: pointer;
 }
-.header .profile button:hover{
+.header .profile .lgt-btn:hover{
     background:var(--orange);
     color:#fff;
     border:2px solid #fff;

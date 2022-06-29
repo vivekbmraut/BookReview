@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +54,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -68,9 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\addAdmin.aspx" />
+    <Content Include="admin\adminProfileView.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
     <Content Include="admin\loginAdmin.aspx" />
+    <Content Include="admin\logout.aspx" />
+    <Content Include="admin\profilePictures\default.png" />
     <Content Include="admin\profilePictures\photo.jpg" />
     <Content Include="admin\editBooks.aspx" />
     <Content Include="admin\userBooks.aspx" />
@@ -81,6 +86,7 @@
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
     <Content Include="CSS\adminHome.css" />
+    <Content Include="CSS\adminProfileView.css" />
     <Content Include="CSS\adminView.css" />
     <Content Include="CSS\bookDetailsAdmin.css" />
     <Content Include="CSS\coverUpload.css" />
@@ -153,6 +159,13 @@
     <Compile Include="admin\adminHome.Master.designer.cs">
       <DependentUpon>adminHome.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\adminProfileView.aspx.cs">
+      <DependentUpon>adminProfileView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminProfileView.aspx.designer.cs">
+      <DependentUpon>adminProfileView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\adminView.aspx.cs">
       <DependentUpon>adminView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -180,6 +193,13 @@
     </Compile>
     <Compile Include="admin\editBooks.aspx.designer.cs">
       <DependentUpon>editBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\userBooks.aspx.cs">
       <DependentUpon>userBooks.aspx</DependentUpon>
@@ -216,6 +236,7 @@
     <Compile Include="bookMain.Master.designer.cs">
       <DependentUpon>bookMain.Master</DependentUpon>
     </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="user\addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

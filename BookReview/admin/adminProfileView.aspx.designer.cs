@@ -11,52 +11,34 @@ namespace BookReview.admin
 {
 
 
-    public partial class adminHome
+    public partial class adminProfileView
     {
 
         /// <summary>
-        /// head control.
+        /// imageChange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm imageChange;
 
         /// <summary>
-        /// searchAny control.
+        /// imgFileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder searchAny;
+        protected global::System.Web.UI.WebControls.FileUpload imgFileUpload;
 
         /// <summary>
-        /// profilePic control.
+        /// btnUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage profilePic;
-
-        /// <summary>
-        /// adminName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl adminName;
-
-        /// <summary>
-        /// middle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder middle;
+        protected global::System.Web.UI.WebControls.Button btnUpload;
     }
 }
