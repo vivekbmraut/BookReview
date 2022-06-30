@@ -2,6 +2,7 @@
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+	<LangVersion>latest</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>
@@ -75,8 +76,9 @@
     <Content Include="admin\bookDetailsAdmin.aspx" />
     <Content Include="admin\loginAdmin.aspx" />
     <Content Include="admin\logout.aspx" />
-    <Content Include="admin\profilePictures\default.png" />
-    <Content Include="admin\profilePictures\photo.jpg" />
+    <Content Include="admin\profilePictures\*.png" />
+    <Content Include="admin\profilePictures\*.jpg" />
+    <Content Include="admin\profilePictures\*.jpeg" />
     <Content Include="admin\editBooks.aspx" />
     <Content Include="admin\userBooks.aspx" />
     <Content Include="admin\userProfileView.aspx" />
@@ -236,7 +238,9 @@
     <Compile Include="bookMain.Master.designer.cs">
       <DependentUpon>bookMain.Master</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Connection.cs" />
+	<Compile Include="Services\AdminService.cs" />
     <Compile Include="user\addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

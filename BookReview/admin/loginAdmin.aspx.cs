@@ -20,7 +20,7 @@ namespace BookReview.admin
                     MySqlConnection conn;
                     MySqlCommand cmd;
 
-                    conn = Connection.getConnectString();
+                    conn = Models.Connection.getConnectString();
                     conn.Open();
 
                     string sql =$"select aid,email,password from admin where email=\"{Request.Form["EmailInput"]}\" and password=SHA2(\"{Request.Form["PasswordInput"]}\",224);";

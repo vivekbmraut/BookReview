@@ -8,7 +8,7 @@
     <div class="heading">Your<span class="ribbon">Profile</span></div>
     <div class="whole-div">
       <div class="info-div">
-      <div class="profile-picture" style="background-image:url(./profilePictures/default.png)">
+      <div class="profile-picture" style="background-image:url(./profilePictures/default.png)" id="profilePic" runat="server">
       </div>
       <div class="edit-pic">
         <form id="imageChange" runat="server">
@@ -17,8 +17,8 @@
             <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />
         </form>
       </div>
-      Name<br><span class="details">Vivek Raut</span><br/>
-      Email<br><span class="details">vivek@gmail.com</span><br/>
+      Name<br><span class="details" id="adminName" runat="server"></span><br/>
+      Email<br><span class="details" id="adminEmail" runat="server"></span><br/>
     </div>
     </div>
     <script src="../JS/profileView.js"></script>

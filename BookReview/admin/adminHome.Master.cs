@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using BookReview.Services;
 
 namespace BookReview.admin
 {
@@ -14,21 +15,12 @@ namespace BookReview.admin
         {
            if(Session["aid"]!=null)
            {
-                try
+                var admin = AdminService.Get(Convert.ToInt32(Session["aid"]));
+                if (admin != null)
                 {
-                    MySqlConnection conn =Connection.getConnectString();
-                    conn.Open();
-                    string query = $"select name,profile_pic from admin where aid=\"{Session["aid"]}\";";
-                    MySqlCommand cmd= new MySqlCommand(query, conn);
-                    MySqlDataReader red = cmd.ExecuteReader();
-                    red.Read();
-                    profilePic.Attributes.Add("src", $"./profilePictures/{red.GetString("profile_pic")}");
-                    adminName.InnerText = red.GetString("name");
-                    
-                    red.Close();
-                    conn.Close();
+                    profilePic.Attributes.Add("src", "./profilePictures/"+admin.profile_pic);
+                    adminName.InnerText = admin.name;
                 }
-                catch(MySqlException ex) { }
 
            }    
         }
