@@ -16,6 +16,7 @@
             <label for="imgFileUpload" class="chose-btn">Change image</label><br />
             <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />
         </form>
+          <div class="img-warn" id="imgWarn" runat="server">Image should be of format .jpeg OR .jpg OR .png</div>
       </div>
       Name<br><span class="details" id="adminName" runat="server"></span><br/>
       Email<br><span class="details" id="adminEmail" runat="server"></span><br/>

@@ -40,5 +40,31 @@ namespace BookReview.Services
             }
             return a;
         }
+
+        public static Admin? Update(Admin admin)
+        {
+            var chk=Get(admin.aid);
+            if(chk!=null)
+            {
+                try
+                {
+                    MySqlConnection conn = Connection.getConnectString();
+                    conn.Open();
+                    string query = $"update admin set name=\"{admin.name}\",email=\"{admin.email}\",profile_pic=\"{admin.profile_pic}\" ";
+                    var chkUpdate=(new MySqlCommand(query, conn)).ExecuteNonQuery();
+                    conn.Close();
+                    if (chkUpdate==0)
+                    {
+                        conn.Close();
+                        return null;
+                    }
+                    var ad = Get(admin.aid);
+                    return ad;
+                }
+                catch(MySqlException ex) { return null; }
+            }
+
+            return null;
+        }
     }
 }
