@@ -9,17 +9,17 @@
     cursor: pointer;
 }
 
-    .btn:hover {
-        background: var(--orange);
-        color: #fff;
-    }
+.btn:hover {
+    background: var(--orange);
+    color: #fff;
+}
 
 .admin-form {
-    margin-top: 10rem;
+    margin-top: 15rem;
     margin-left: 40%;
     margin-bottom: 2rem;
     width: 40rem;
-    height: 55rem;
+    height: 50rem;
     box-shadow: var(--box-shadow);
     padding: 2rem;
     border-radius: .5rem;
@@ -39,8 +39,15 @@
     text-transform: uppercase;
     color: var(--black);
     text-align: center;
+    margin:0 0 40px 0;
 }
 
+.validator{
+    margin:0 0 0 18%;
+    font-size:1.4rem;
+    color:red;
+    font-style:italic;
+}
 .admin-form .box {
     width: 70%;
     margin: 1rem 5.5rem;
@@ -51,6 +58,16 @@
     padding: 1rem;
     text-transform: none;
     align-items: center;
+}
+
+.email-err{
+    margin:0 34% 8rem 41%;
+    padding:2px 0 2px 50px;
+    font-size:1.6rem;
+    background:red;
+    color:#ffff;
+    border-radius:5px;
+    display:none;
 }
 
 @media screen and (max-width: 650px) {

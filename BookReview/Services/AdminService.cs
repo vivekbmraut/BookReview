@@ -6,7 +6,7 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using Admin=BookReview.Models.Admin;
 using Connection = BookReview.Models.Connection;
-
+using System.Windows.Forms;
 
 namespace BookReview.Services
 {
@@ -41,6 +41,20 @@ namespace BookReview.Services
             return a;
         }
 
+        public static Boolean isEmailRegistered(string email)
+        {
+            MySqlConnection conn = Connection.getConnectString();
+            conn.Open();
+            string sql = $"select aid from admin where email=\"{email}\"";
+            object chkEntry = (new MySqlCommand(sql, conn)).ExecuteScalar();
+            conn.Close();
+            if(chkEntry==null)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public static Admin? Update(Admin admin)
         {
             var chk=Get(admin.aid);
@@ -55,7 +69,6 @@ namespace BookReview.Services
                     conn.Close();
                     if (chkUpdate==0)
                     {
-                        conn.Close();
                         return null;
                     }
                     var ad = Get(admin.aid);
@@ -73,7 +86,14 @@ namespace BookReview.Services
             {
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
-                string query = $"insert into admin values(NULL,\"{admin.name}\",\"{admin.email}\",SHA2(\"{admin.password}\",224),default.png)";
+                string query = $"insert into admin values(NULL,\"{admin.name}\",\"{admin.email}\",SHA2(\"{admin.password}\",224),\"{admin.profile_pic}\")";
+                
+                var chkInsert = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (chkInsert==0)
+                {
+                    return false;
+                }
                 return true;
             }
             catch(MySqlException ex)

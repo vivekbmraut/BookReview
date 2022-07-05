@@ -1,4 +1,4 @@
-﻿#nullable enable;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace BookReview.Models
         public string name { get; set; }
         public string email { get; set; }
         public string profile_pic { get; set; }
-        public string? password { get; set; }
+        public string password { get; set; }
 
     }
 }
