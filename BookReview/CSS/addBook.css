@@ -1,19 +1,27 @@
 ﻿.book-details{
   width:1000px;
-  margin:120px 20%;
+  margin:120px 275px;
+  background:#fff;
 }
 
 .flogo {
 	font-size: 3rem;
 	font-weight: bolder;
 	color: var(--black);
-	margin:0 35%;
+	text-align:center;
 	text-transform: none;
 }
 .flogo i{
 	color: var(--orange);
 }
 
+.box {
+	
+	font-size: 1.5rem;
+	color: var(--black);
+	border-radius: .5rem;
+	padding: 1rem;
+}
 .book-details form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -24,7 +32,7 @@
 .book-details input {
 	border-radius:5px;
 	padding:1rem 0;
-	font-size:2rem;
+	font-size:1.5rem;
 	border:1px solid var(--orange);
 }
 
@@ -50,7 +58,7 @@
 }
 
 .req-validator{
-	font-size:1.7rem;
+	font-size:1.5rem;
 	color:red;
 	font-style:italic;
 }

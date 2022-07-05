@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
     
     <h1 class="heading">View<span class="ribbon">Books</span></h1>
-    <a href="#"><div class="addbk-btn"><i class="fa-solid fa-plus"></i>Add Book</div></a>    
+    <a href="addBookAdmin.aspx"><div class="addbk-btn"><i class="fa-solid fa-plus"></i>Add Book</div></a>    
     <div class="book">
             
             <div class="box">

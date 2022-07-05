@@ -1,11 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bookMain.Master" AutoEventWireup="true" CodeBehind="addBook.aspx.cs" Inherits="BookReview.user.addBook" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="addBookAdmin.aspx.cs" Inherits="BookReview.admin.addBookAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/addBook.css" rel="stylesheet" />
 </asp:Content>
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
-    
     <div class="book-details">
         <div class="flogo"><i class="fa-solid fa-book"></i>Add Book</div>
      <form name="formBook" action="addBook.aspx" runat="server">
@@ -52,5 +49,5 @@
            <asp:Button Text="Submit" CssClass="sbt-btn" runat="server" />
       </form>
     </div>
-    
 </asp:Content>
+
