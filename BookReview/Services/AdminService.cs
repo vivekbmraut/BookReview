@@ -74,9 +74,11 @@ namespace BookReview.Services
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
                 string query = $"insert into admin values(NULL,\"{admin.name}\",\"{admin.email}\",SHA2(\"{admin.password}\",224),default.png)";
+                return true;
             }
             catch(MySqlException ex)
-            { }
+            { return false; }
+
         }
     }
 }
