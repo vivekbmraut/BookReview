@@ -19,14 +19,14 @@
 
 .book {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
-    grid-template-rows: repeat(auto-fit, minmax(30rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
     gap: 1rem;
 }
 
+
 .book .box {
     margin: 0 1rem;
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
     background: #fff;
     border: var(--border);
     box-shadow: var(--box-shadow);

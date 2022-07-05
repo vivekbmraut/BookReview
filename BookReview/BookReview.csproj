@@ -2,7 +2,7 @@
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-	<LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>
@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\addAdmin.aspx" />
+    <Content Include="admin\addBookAdmin.aspx" />
     <Content Include="admin\adminProfileView.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
@@ -153,6 +154,13 @@
     </Compile>
     <Compile Include="admin\addAdmin.aspx.designer.cs">
       <DependentUpon>addAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\addBookAdmin.aspx.cs">
+      <DependentUpon>addBookAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addBookAdmin.aspx.designer.cs">
+      <DependentUpon>addBookAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\adminHome.Master.cs">
       <DependentUpon>adminHome.Master</DependentUpon>
@@ -240,7 +248,7 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Connection.cs" />
-	<Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\AdminService.cs" />
     <Compile Include="user\addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
