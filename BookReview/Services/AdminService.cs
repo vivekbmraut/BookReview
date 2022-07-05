@@ -66,5 +66,17 @@ namespace BookReview.Services
 
             return null;
         }
+
+        public static Boolean Add(Admin admin)
+        {
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"insert into admin values(NULL,\"{admin.name}\",\"{admin.email}\",SHA2(\"{admin.password}\",224),default.png)";
+            }
+            catch(MySqlException ex)
+            { }
+        }
     }
 }

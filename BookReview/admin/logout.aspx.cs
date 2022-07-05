@@ -11,7 +11,7 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Contents.RemoveAll();
+            Session.Abandon();
             Response.Redirect("loginAdmin.aspx");
         }
     }
