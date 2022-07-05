@@ -64,7 +64,8 @@ namespace BookReview.Services
                 {
                     MySqlConnection conn = Connection.getConnectString();
                     conn.Open();
-                    string query = $"update admin set name=\"{admin.name}\",email=\"{admin.email}\",profile_pic=\"{admin.profile_pic}\" ";
+                    string query = $"update admin set name=\"{admin.name}\",email=\"{admin.email}\",profile_pic=\"{admin.profile_pic}\" where aid=\"{admin.aid}\" ";
+                    
                     var chkUpdate=(new MySqlCommand(query, conn)).ExecuteNonQuery();
                     conn.Close();
                     if (chkUpdate==0)

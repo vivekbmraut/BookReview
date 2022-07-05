@@ -12,9 +12,10 @@ namespace BookReview.admin
 {
     public partial class adminProfileView : System.Web.UI.Page
     {
-        Admin? admn;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            Admin? admn;
             admn = AdminService.Get(Convert.ToInt32(Session["aid"]));
             if (admn != null)
             {
@@ -38,12 +39,13 @@ namespace BookReview.admin
                 }
                 else
                 {
+                    var adm = AdminService.Get(Convert.ToInt32(Session["aid"]));
                     string filePath = Server.MapPath("~/admin/profilePictures/");
                     imgFileUpload.SaveAs($"{filePath}{Session["aid"]}{fileExt.ToLower()}");
-                    if(admn!=null)
+                    if(adm!=null)
                     {
-                        admn.profile_pic = $"{Session["aid"]}{fileExt.ToLower()}";
-                        AdminService.Update(admn);
+                        adm.profile_pic = $"{Session["aid"]}{fileExt.ToLower()}";
+                        AdminService.Update(adm);
                     }
                     Response.Redirect("adminProfileView.aspx");
                 }
