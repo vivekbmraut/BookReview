@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="adminProfileView.aspx.cs" Inherits="BookReview.admin.adminProfileView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="myProfile.aspx.cs" Inherits="BookReview.admin.adminProfileView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/adminProfileView.css" rel="stylesheet" />
 </asp:Content>

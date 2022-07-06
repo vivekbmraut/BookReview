@@ -72,7 +72,7 @@
   <ItemGroup>
     <Content Include="admin\addAdmin.aspx" />
     <Content Include="admin\addBookAdmin.aspx" />
-    <Content Include="admin\adminProfileView.aspx" />
+    <Content Include="admin\myProfile.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
     <Content Include="admin\loginAdmin.aspx" />
@@ -169,12 +169,12 @@
     <Compile Include="admin\adminHome.Master.designer.cs">
       <DependentUpon>adminHome.Master</DependentUpon>
     </Compile>
-    <Compile Include="admin\adminProfileView.aspx.cs">
-      <DependentUpon>adminProfileView.aspx</DependentUpon>
+    <Compile Include="admin\myProfile.aspx.cs">
+      <DependentUpon>myProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\adminProfileView.aspx.designer.cs">
-      <DependentUpon>adminProfileView.aspx</DependentUpon>
+    <Compile Include="admin\myProfile.aspx.designer.cs">
+      <DependentUpon>myProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\adminView.aspx.cs">
       <DependentUpon>adminView.aspx</DependentUpon>
