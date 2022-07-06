@@ -14,10 +14,16 @@
 .admin-card {
     box-shadow: 5px 5px 20px 2px black;
     width: 200px;
-    height: 270px;
+    height: 310px;
     border-radius: 5px;
     text-align: center;
     transition: 0.1s;
+    display:block;
+}
+
+.add {
+    box-shadow: none;
+    border: dashed 3px #6E85B7;
 }
 
 .admin-card:hover {

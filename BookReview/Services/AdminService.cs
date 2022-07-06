@@ -41,6 +41,27 @@ namespace BookReview.Services
             return a;
         }
 
+        public static List<Admin>? Getall()
+        {
+            List<Admin> allAdmins = new List<Admin>();
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = "select aid,name,email,profile_pic from admin;";
+                MySqlDataReader red = (new MySqlCommand(query, conn)).ExecuteReader();
+                while(red.Read())
+                {
+                    allAdmins.Add(new Admin() {aid=Convert.ToInt32(red.GetString("aid")),name=red.GetString("name"),email=red.GetString("email"),profile_pic=red.GetString("profile_pic") });
+                }
+                red.Close();
+                conn.Close();
+                return allAdmins;
+            }
+            catch(MySqlException ex)
+            { return null; }
+        }
+
         public static Boolean isEmailRegistered(string email)
         {
             MySqlConnection conn = Connection.getConnectString();
