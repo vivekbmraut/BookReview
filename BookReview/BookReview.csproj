@@ -85,7 +85,9 @@
     <Content Include="admin\userProfileView.aspx" />
     <Content Include="admin\userReviews.aspx" />
     <Content Include="admin\userView.aspx" />
-    <Content Include="bookCovers\default-cover.png" />
+    <Content Include="bookCovers\*.png" />
+    <Content Include="bookCovers\*.jpg" />
+    <Content Include="bookCovers\*.jpeg" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
     <Content Include="CSS\adminHome.css" />
@@ -126,7 +128,9 @@
     <Content Include="user\login.aspx" />
     <Content Include="user\MyBooks.aspx" />
     <Content Include="user\MyReviews.aspx" />
-    <Content Include="user\profilePictures\default.png" />
+    <Content Include="user\profilePictures\*.png" />
+    <Content Include="user\profilePictures\*.jpg" />
+    <Content Include="user\profilePictures\*.jpeg" />
     <Content Include="user\profileView.aspx" />
     <Content Include="user\registerPage.aspx" />
     <Content Include="temps\bookDisplay.html" />

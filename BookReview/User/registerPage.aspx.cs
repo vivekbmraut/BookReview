@@ -30,6 +30,11 @@ namespace BookReview.html
                     reviewer.total_reviews = 0;
                     reviewer.blocked_reviews = 0;
                     reviewer.is_suspended = 0;
+                    var chk=ReviewerService.Add(reviewer);
+                    if(chk)
+                    {
+                        Response.Redirect("./login.aspx");
+                    }
                 }
             }
         }

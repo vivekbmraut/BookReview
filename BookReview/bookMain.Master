@@ -27,7 +27,7 @@
 
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <a href="./login.aspx"><div class="fas fa-user" id="login-btn"></div></a>
+            <a href="~/user/login.aspx" id="loginLink" runat="server"><div class="fas fa-user" id="btn" runat="server"></div></a>
         </div>
         <form  class="search-form" action="#" >
             <input type="search" id="search-box" placeholder="search Book" />
@@ -47,7 +47,7 @@
     <section class="footer1" style="color:orange">
             <div class="box-container">
                 <div class="box">
-                    <h3 style:"color">eBookReviews<i class="fas fa-book-open"></i></h3>
+                    <h3 style:"text-transform:none">eBookReviews<i class="fas fa-book-open"></i></h3>
                     <div class="share">
                         <i class="fab fa-facebook-f"></i> 
                         <i class="fab fa-twitter"></i>

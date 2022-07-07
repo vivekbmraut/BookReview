@@ -11,7 +11,11 @@ namespace BookReview
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["ruid"] != null)
+            {
+                btn.Style.Add("color", "green");
+                loginLink.Attributes.Add("href", "~/user/profileView.aspx");
+            }
         }
     }
 }
