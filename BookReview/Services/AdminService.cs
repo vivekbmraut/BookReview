@@ -62,19 +62,7 @@ namespace BookReview.Services
             { return null; }
         }
 
-        public static Boolean isEmailRegistered(string email)
-        {
-            MySqlConnection conn = Connection.getConnectString();
-            conn.Open();
-            string sql = $"select aid from admin where email=\"{email}\"";
-            object chkEntry = (new MySqlCommand(sql, conn)).ExecuteScalar();
-            conn.Close();
-            if(chkEntry==null)
-            {
-                return false;
-            }
-            return true;
-        }
+        
 
         public static Admin? Update(Admin admin)
         {
@@ -121,6 +109,20 @@ namespace BookReview.Services
             catch(MySqlException ex)
             { return false; }
 
+        }
+
+        public static Boolean isEmailRegistered(string email)
+        {
+            MySqlConnection conn = Connection.getConnectString();
+            conn.Open();
+            string sql = $"select aid from admin where email=\"{email}\"";
+            object chkEntry = (new MySqlCommand(sql, conn)).ExecuteScalar();
+            conn.Close();
+            if (chkEntry == null)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

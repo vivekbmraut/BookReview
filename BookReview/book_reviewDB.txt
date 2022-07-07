@@ -1,10 +1,21 @@
 create database book_review;
 use book_review;
 
---------------------------------+---------+------------------------------------
-								| QUERIES |
---------------------------------+---------+------------------------------------
+--------------------------------+-------------+--------------------------------
+								| Admin Table |
+--------------------------------+-------------+--------------------------------
 
 create table admin(aid int primary key AUTO_INCREMENT,name varchar(30),email varchar(40) UNIQUE,password varchar(255),profile_pic varchar(255));
 
 insert into admin values(NULL,'Vivek Raut','vivekad@gmail.com',SHA2('vivek123',224),'default.png');
+
+
+
+
+
+--------------------------------+----------------+-----------------------------
+								| Reviewer Table |
+--------------------------------+----------------+-----------------------------
+
+create table reviewer(ruid bigint primary key AUTO_INCREMENT,name varchar(50),email varchar(255) Unique,password varchar(255),profile_pic varchar(255),total_reviews bigint,blocked_reviews tinyint,is_suspended tinyint,page int,Constraint chk_is_suspended CHECK(is_suspended=0 or is_suspended=1));
+
