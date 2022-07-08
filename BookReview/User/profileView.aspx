@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
     <div class="whole-div">
       <div class="pic-div">
-      <div class="profile-picture" style="background-image:url(./profilePictures/default.png)">
+      <div class="profile-picture" style="background-image:url(./profilePictures/default.png)" id="profilePic" runat="server">
       </div>
       <div class="edit-pic">
         <form id="imageChange" runat="server">
@@ -14,16 +14,17 @@
             <asp:Button ID="btnUpload" CssClass="save-btn" runat="server" Text="Save Image" OnClick="btnUpload_Click" />
         </form>
       </div>
+          <div class="img-warn" id="imgWarn" runat="server">Image should be of format .jpeg OR .jpg OR .png</div>
     </div>
     <div class="info-div">
-      Name<br><span class="details">Vivek Raut</span><br/>
-      Email<br><span class="details">vivek@gmail.com</span><br/>
-      Reviews given:<span>4</span><br/>
-      Blocked Reviews:<span>2</span>
+      Name<br><span class="details" id="rName" runat="server">ReviewerName</span><br/>
+      Email<br><span class="details" id="rEmail" runat="server">reviewer@xyz.com</span><br/>
+      Reviews given:<span id="rTotalRev" runat="server">4</span><br/>
+      Blocked Reviews:<span id="rBlockRev" runat="server">2</span>
     </div>
-      <a href="#"><div class="ed-link">View Reviews</div></a>
-      <a href="MyBooks.aspx"><div class="ed-link">View Books</div></a>
-      
+      <a href="MyReviews.aspx" id="myRev" runat="server"><div class="ed-link">View Reviews</div></a>
+      <a href="MyBooks.aspx" id="myBk" runat="server"><div class="ed-link">View Books</div></a>
+      <a href="logout.aspx"><div class="logout">Logout</div></a>
     </div>
     <script src="../JS/profileView.js"></script>
 </asp:Content>

@@ -126,6 +126,7 @@
     <Content Include="user\categorizedBooks.aspx" />
     <Content Include="user\editReview.aspx" />
     <Content Include="user\login.aspx" />
+    <Content Include="user\logout.aspx" />
     <Content Include="user\MyBooks.aspx" />
     <Content Include="user\MyReviews.aspx" />
     <Content Include="user\profilePictures\*.png" />
@@ -289,6 +290,13 @@
     </Compile>
     <Compile Include="user\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\MyBooks.aspx.cs">
       <DependentUpon>MyBooks.aspx</DependentUpon>

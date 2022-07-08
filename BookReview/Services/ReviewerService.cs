@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,43 @@ namespace BookReview.Services
 {
     public class ReviewerService
     {
+        public static Reviewer? Get(long ruid)
+        {
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"select * from reviewer where ruid={ruid};";
+                
+                MySqlDataReader red = (new MySqlCommand(query, conn)).ExecuteReader();
+               
+                if (red.HasRows == false)
+                {   
+                    red.Close();
+                    conn.Close();
+                    return null;
+                }
+                red.Read();
+                Reviewer reviewer = new Reviewer();
+                reviewer.ruid = Convert.ToInt64(red.GetString("ruid"));
+                reviewer.name = red.GetString("name");
+                reviewer.email = red.GetString("email");
+                reviewer.profile_pic = red.GetString("profile_pic");
+                reviewer.total_reviews = Convert.ToInt32(red.GetString("total_reviews"));
+                reviewer.blocked_reviews = Convert.ToInt32(red.GetString("blocked_reviews"));
+                reviewer.is_suspended = Convert.ToInt32(red.GetString("is_suspended"));
+                reviewer.page = Convert.ToInt32(red.GetString("page"));
+                
+                red.Close();
+                conn.Close();
+                return reviewer; 
+            }
+            catch(MySqlException ex)
+            { 
+                return null; 
+            }
+        }
+
 
         public static Boolean Add(Reviewer reviewer)
         {
@@ -50,6 +88,33 @@ namespace BookReview.Services
                 return false;
             }
             
+        }
+
+        public static Reviewer? Update(Reviewer reviewer)
+        {
+            var chk = Get(reviewer.ruid);
+            if(chk!=null)
+            {
+                try
+                {
+                    MySqlConnection conn = Connection.getConnectString();
+                    conn.Open();
+                    string query = $"update reviewer set name=\"{reviewer.name}\",email=\"{reviewer.email}\",profile_pic=\"{reviewer.profile_pic}\",total_reviews={reviewer.total_reviews},blocked_reviews={reviewer.blocked_reviews} where ruid={reviewer.ruid};";
+                    var chkUpdate = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                    conn.Close();
+                    if(chkUpdate==0)
+                    {
+                        return null;
+                    }
+                    var rev = Get(reviewer.ruid);
+                    return rev;
+                }
+                catch(MySqlException ex)
+                {
+                    return null;
+                }
+            }
+            return null;
         }
 
         public static bool isEmailRegistered(string email)
