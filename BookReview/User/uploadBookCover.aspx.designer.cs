@@ -15,6 +15,15 @@ namespace BookReview.user
     {
 
         /// <summary>
+        /// bookCover control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage bookCover;
+
+        /// <summary>
         /// coverUpload control.
         /// </summary>
         /// <remarks>
@@ -40,5 +49,23 @@ namespace BookReview.user
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpload;
+
+        /// <summary>
+        /// skipBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor skipBtn;
+
+        /// <summary>
+        /// imgWarn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl imgWarn;
     }
 }

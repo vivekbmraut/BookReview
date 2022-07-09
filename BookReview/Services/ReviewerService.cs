@@ -28,14 +28,14 @@ namespace BookReview.Services
                 }
                 red.Read();
                 Reviewer reviewer = new Reviewer();
-                reviewer.ruid = Convert.ToInt64(red.GetString("ruid"));
+                reviewer.ruid = red.GetInt64("ruid");
                 reviewer.name = red.GetString("name");
                 reviewer.email = red.GetString("email");
                 reviewer.profile_pic = red.GetString("profile_pic");
-                reviewer.total_reviews = Convert.ToInt32(red.GetString("total_reviews"));
-                reviewer.blocked_reviews = Convert.ToInt32(red.GetString("blocked_reviews"));
-                reviewer.is_suspended = Convert.ToInt32(red.GetString("is_suspended"));
-                reviewer.page = Convert.ToInt32(red.GetString("page"));
+                reviewer.total_reviews = red.GetInt64("total_reviews");
+                reviewer.blocked_reviews = red.GetInt32("blocked_reviews");
+                reviewer.is_suspended =red.GetInt32("is_suspended");
+                reviewer.page = red.GetInt32("page");
                 
                 red.Close();
                 conn.Close();

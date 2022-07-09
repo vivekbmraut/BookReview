@@ -7,8 +7,8 @@
     <div class="flogo"><i class="fas fa-edit"></i>Edit Review</div>
     <div class="r-section">
       <div class="r-form">
-      <form action="#" method="post">
-        <textarea class="give-review" rows="5" cols="50" required></textarea><br/>
+      <form action="editReview.aspx" id="editForm" method="post" runat="server">
+        <textarea class="give-review" rows="5" cols="50" id="editedReview" runat="server" required></textarea><br/>
         <button type="submit" class="r-btn">Save Review</button>
       </form >
       </div>

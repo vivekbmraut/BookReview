@@ -12,7 +12,7 @@ namespace BookReview.Models
         public string email { get; set; }
         public string password { get; set; }
         public string profile_pic { get; set; }
-        public int total_reviews { get; set; }
+        public long total_reviews { get; set; }
         public int blocked_reviews { get; set; }
         public int is_suspended { get; set; }
         public int page { get; set; }

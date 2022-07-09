@@ -9,7 +9,15 @@ create table admin(aid int primary key AUTO_INCREMENT,name varchar(30),email var
 
 insert into admin values(NULL,'Vivek Raut','vivekad@gmail.com',SHA2('vivek123',224),'default.png');
 
-
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| aid         | int          | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(30)  | YES  |     | NULL    |                |
+| email       | varchar(400) | YES  | UNI | NULL    |                |
+| password    | varchar(255) | YES  |     | NULL    |                |
+| profile_pic | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
 
 
 
@@ -19,8 +27,22 @@ insert into admin values(NULL,'Vivek Raut','vivekad@gmail.com',SHA2('vivek123',2
 
 create table reviewer(ruid bigint primary key AUTO_INCREMENT,name varchar(50),email varchar(255) Unique,password varchar(255),profile_pic varchar(255),total_reviews bigint,blocked_reviews tinyint,is_suspended tinyint,page int,Constraint chk_is_suspended CHECK(is_suspended=0 or is_suspended=1));
 
- insert into reviewer values(NULL,"Varad Rakshe","varad11@gmail.com",SHA2("varad123",224),"default.png",0,0,0,1)
- 
+insert into reviewer values(NULL,"Varad Rakshe","varad11@gmail.com",SHA2("varad123",224),"default.png",0,0,0,1)
+
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| ruid            | bigint       | NO   | PRI | NULL    | auto_increment |
+| name            | varchar(50)  | YES  |     | NULL    |                |
+| email           | varchar(255) | YES  | UNI | NULL    |                |
+| password        | varchar(255) | YES  |     | NULL    |                |
+| profile_pic     | varchar(255) | YES  |     | NULL    |                |
+| total_reviews   | bigint       | YES  |     | NULL    |                |
+| blocked_reviews | tinyint      | YES  |     | NULL    |                |
+| is_suspended    | tinyint      | YES  |     | NULL    |                |
+| page            | int          | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+
 
 +------+------------------+---------------------+----------------------------------------------------------+-------------+---------------+-----------------+--------------+------+
 | ruid | name             | email               | password                                                 | profile_pic | total_reviews | blocked_reviews | is_suspended | page |
@@ -28,3 +50,60 @@ create table reviewer(ruid bigint primary key AUTO_INCREMENT,name varchar(50),em
 |    1 | Varad Rakshe     | varad11@gmail.com   | 52d5cd3128bafca35e44498b35a67df8c7e2217f2e8364fca93e8c49 | default.png |             0 |               0 |            0 |    1 |
 |    2 | Harshal Thombare | harshal13@gmail.com | 5501c43035c67d1605b6986170bb9fb4ac52070043994937e05b4df4 | default.png |             0 |               0 |            0 |    1 |
 +------+------------------+---------------------+----------------------------------------------------------+-------------+---------------+-----------------+--------------+------+
+
+
+
+
+----------------------------------------+----------------+-------------------------------------------------------
+										|	 Book Table  |
+----------------------------------------+----------------+-------------------------------------------------------
+create table book(bid bigint primary key AUTO_INCREMENT,book_cover varchar(255),title varchar(256),authors varchar(512),description varchar(3072),year varchar(4),edition int,language varchar(20),publisher varchar(50),category varchar(20),aid int references admin(aid) on update cascade,ruid bigint references reviewer(ruid) on update cascade,page int);
+
+insert into book values(NULL,"default-cover.png","The ANSI C Programming Language","Brian W. Kernighan, Dennis M. Ritchie","Presents a complete guide to ANSI standard C language programming. Written by the developers of C, this new version helps readers keep up with the finalized ANSI standard for C while showing how to take advantage of C's rich set of operators, economy of expression, improved control flow, and data structures. This 2nd edition has been completely rewritten with additional examples and problem sets to clarify the implementation of difficult language constructs.","1998",2,"English","Prentice Hall","Education",1,NULL,1);
+
++-----+-------------------+---------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+---------+----------+---------------+-----------+-----+------+------+
+| bid | book_cover        | title                           | authors                               | description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | year | edition | language | publisher     | category  | aid | ruid | page |
++-----+-------------------+---------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+---------+----------+---------------+-----------+-----+------+------+
+|   1 | default-cover.png | The ANSI C Programming Language | Brian W. Kernighan, Dennis M. Ritchie | Presents a complete guide to ANSI standard C language programming. Written by the developers of C, this new version helps readers keep up with the finalized ANSI standard for C while showing how to take advantage of C's rich set of operators, economy of expression, improved control flow, and data structures. This 2nd edition has been completely rewritten with additional examples and problem sets to clarify the implementation of difficult language constructs. | 1998 |       2 | English  | Prentice Hall | Education |   1 | NULL |    1 |
++-----+-------------------+---------------------------------+---------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+---------+----------+---------------+-----------+-----+------+------+
+
+
++-------------+---------------+------+-----+---------+----------------+
+| Field       | Type          | Null | Key | Default | Extra          |
++-------------+---------------+------+-----+---------+----------------+
+| bid         | bigint        | NO   | PRI | NULL    | auto_increment |
+| book_cover  | varchar(255)  | YES  |     | NULL    |                |
+| title       | varchar(50)   | YES  |     | NULL    |                |
+| authors     | varchar(512)  | YES  |     | NULL    |                |
+| description | varchar(3072) | YES  |     | NULL    |                |
+| year        | varchar(4)    | YES  |     | NULL    |                |
+| edition     | int           | YES  |     | NULL    |                |
+| language    | varchar(20)   | YES  |     | NULL    |                |
+| publisher   | varchar(50)   | YES  |     | NULL    |                |
+| category    | varchar(20)   | YES  |     | NULL    |                |
+| aid         | int           | YES  |     | NULL    |                |
+| ruid        | bigint        | YES  |     | NULL    |                |
+| page        | int           | YES  |     | NULL    |                |
++-------------+---------------+------+-----+---------+----------------+
+
+
+
+----------------------------------------+----------------+-------------------------------------------------------
+										| Reviews Table  |
+----------------------------------------+----------------+-------------------------------------------------------
+
+create table reviews(revid bigint primary key AUTO_INCREMENT,review varchar(1024),review_date date,reviewed_by bigint references reviewer(ruid) on delete cascade on update cascade,review_for bigint references book(bid) on delete cascade on update cascade,is_blocked tinyint,block_activity int references admin(aid) on update cascade,Constraint chk_is_blocked CHECK(is_blocked=0 or is_blocked=1));
+
+insert into reviews values(NULL,"Best book of you are professional in pascal ,fortran ,book gives examples that helps get clear with topic do read if you are programmer","2022-09-07",1,1,0,NULL);
+
++----------------+---------------+------+-----+---------+----------------+
+| Field          | Type          | Null | Key | Default | Extra          |
++----------------+---------------+------+-----+---------+----------------+
+| revid          | bigint        | NO   | PRI | NULL    | auto_increment |
+| review         | varchar(1024) | YES  |     | NULL    |                |
+| review_date    | date          | YES  |     | NULL    |                |
+| reviewed_by    | bigint        | YES  |     | NULL    |                |
+| review_for     | bigint        | YES  |     | NULL    |                |
+| is_blocked     | tinyint       | YES  |     | NULL    |                |
+| block_activity | int           | YES  |     | NULL    |                |
++----------------+---------------+------+-----+---------+----------------+

@@ -252,10 +252,14 @@
       <DependentUpon>bookMain.Master</DependentUpon>
     </Compile>
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\Reviewer.cs" />
+    <Compile Include="Models\Reviews.cs" />
     <Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\BookServices.cs" />
     <Compile Include="Services\ReviewerService.cs" />
+    <Compile Include="Services\ReviewsService.cs" />
     <Compile Include="user\addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

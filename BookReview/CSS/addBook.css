@@ -70,11 +70,13 @@
   background:var(--orange);
   color:#fff;
   border-radius:5px;
+  
 }
 
 .book-details .sbt-btn:hover {
 	background:#fff;
 	color:#000;
+	cursor:pointer;
 }
 
 .book-details div{

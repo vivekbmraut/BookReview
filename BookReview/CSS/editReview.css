@@ -22,8 +22,11 @@
     border:1px solid ;
 }
 
-.r-form {
+.r-form{
     width: 65%;
+}
+.r-form textarea{
+    text-transform:none;
 }
 
 .r-btn {
