@@ -15,10 +15,7 @@ namespace BookReview.user
         {
             if(IsPostBack)
             {
-                foreach(var a in Request.Form.AllKeys)
-                {
-                    System.Windows.Forms.MessageBox.Show(a);
-                }
+
                 Book book = new Book();
                 book.book_cover = "default-cover.png";
                 book.title = Request.Form["title"];
