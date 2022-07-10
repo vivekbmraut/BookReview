@@ -17,11 +17,11 @@ namespace BookReview.Services
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
                 string query = $"select * from reviewer where ruid={ruid};";
-                
+
                 MySqlDataReader red = (new MySqlCommand(query, conn)).ExecuteReader();
-               
+
                 if (red.HasRows == false)
-                {   
+                {
                     red.Close();
                     conn.Close();
                     return null;
@@ -34,20 +34,38 @@ namespace BookReview.Services
                 reviewer.profile_pic = red.GetString("profile_pic");
                 reviewer.total_reviews = red.GetInt64("total_reviews");
                 reviewer.blocked_reviews = red.GetInt32("blocked_reviews");
-                reviewer.is_suspended =red.GetInt32("is_suspended");
+                reviewer.is_suspended = red.GetInt32("is_suspended");
                 reviewer.page = red.GetInt32("page");
-                
+
                 red.Close();
                 conn.Close();
-                return reviewer; 
+                return reviewer;
             }
-            catch(MySqlException ex)
-            { 
-                return null; 
+            catch (MySqlException ex)
+            {
+                return null;
             }
         }
 
-
+        public static string GetName(long ruid)
+        {
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"select name from reviewer where ruid={ruid};";
+                object rdr = (new MySqlCommand(query, conn)).ExecuteScalar();
+                conn.Close();
+                if (rdr == null)
+                    return "";
+                return rdr.ToString();
+            }
+            catch (MySqlException ex)
+            {
+                return "";
+            }
+        }
+       
         public static Boolean Add(Reviewer reviewer)
         {
             try

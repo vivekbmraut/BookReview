@@ -13,6 +13,10 @@ namespace BookReview.user
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["ruid"]==null)
+            {
+                Response.Redirect("registerNotice.aspx");
+            }
             if(IsPostBack)
             {
 
@@ -26,7 +30,7 @@ namespace BookReview.user
                 book.edition= Convert.ToInt32(Request.Form["edition"]);
                 book.category= Request.Form["category"];
                 book.publisher = Request.Form["publisher"];
-                book.ruid = 1;
+                book.ruid = Convert.ToInt64(Session["ruid"]);
                 var id=BookServices.Add(book);
                 if(id!=0)
                 {

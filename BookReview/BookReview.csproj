@@ -124,6 +124,7 @@
     <Content Include="JS\profileView.js" />
     <Content Include="user\addBook.aspx" />
     <Content Include="user\categorizedBooks.aspx" />
+    <Content Include="user\deleteReview.aspx" />
     <Content Include="user\editReview.aspx" />
     <Content Include="user\login.aspx" />
     <Content Include="user\logout.aspx" />
@@ -133,6 +134,7 @@
     <Content Include="user\profilePictures\*.jpg" />
     <Content Include="user\profilePictures\*.jpeg" />
     <Content Include="user\profileView.aspx" />
+    <Content Include="user\registerNotice.aspx" />
     <Content Include="user\registerPage.aspx" />
     <Content Include="temps\bookDisplay.html" />
     <Content Include="user\bookHome.aspx" />
@@ -281,6 +283,13 @@
     <Compile Include="user\categorizedBooks.aspx.designer.cs">
       <DependentUpon>categorizedBooks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="user\deleteReview.aspx.cs">
+      <DependentUpon>deleteReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\deleteReview.aspx.designer.cs">
+      <DependentUpon>deleteReview.aspx</DependentUpon>
+    </Compile>
     <Compile Include="user\editReview.aspx.cs">
       <DependentUpon>editReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -322,6 +331,13 @@
     </Compile>
     <Compile Include="user\profileView.aspx.designer.cs">
       <DependentUpon>profileView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\registerNotice.aspx.cs">
+      <DependentUpon>registerNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\registerNotice.aspx.designer.cs">
+      <DependentUpon>registerNotice.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\registerPage.aspx.cs">
       <DependentUpon>registerPage.aspx</DependentUpon>

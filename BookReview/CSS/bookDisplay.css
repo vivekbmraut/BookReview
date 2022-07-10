@@ -73,21 +73,25 @@
     margin-bottom:20px;
 }
 
-.review p {
+.review .reviewer-name {
+    font-size:16px;
+    font-weight:bold;
+    padding: 5px 0 9px 2px;
+    display:block;
+}
+
+.review .r-text {
     font-size: 1.5rem;
+    display:block;
     text-transform:none;
 }
 
-.review h2 {
-    padding: 5px 0 9px 2px;
-}
 .date{
     font-style:italic;
     font-weight:bold;
 }
 
 .r-btns{
-
     margin-left:80%;
 }
 
@@ -118,12 +122,16 @@
 .give-review {
     resize: vertical;
     width: 90%;
+    padding:0 5px;
+    border-radius:10px;
     font-size: 15px;
     border:1px solid ;
+    
 }
 
 .r-form {
     width: 65%;
+    text-transform: none;
 }
 
 .r-btn {
@@ -132,6 +140,7 @@
     background: var(--orange);
     color: #fff;
     border-radius: 0.5rem;
+    border: 2px solid var(--orange);
     font-size: 2rem;
     padding: 2px;
 }
@@ -154,7 +163,9 @@
 }
 
 .warn {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight:bold;
     text-transform: none;
     margin: 9px;
+    color:red;
 }

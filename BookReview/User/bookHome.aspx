@@ -8,11 +8,11 @@
     <div class="box-container">
 
         <h1 class="heading">Some <span>books</span></h1>
-        <div class="book">
+        <div class="book" id="bookContainer" runat="server">
             
             <div class="box">
-                <img src="/Images/book1.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
+                <img src="/Images/book1.jpg" alt="Alternate Text" class="book-cover" runat="server"/>
+                <h3 class="book-title">Book Name</h3>
                 <a href="./bookDetails.aspx" class="btn">View</a>
             </div>
 
@@ -52,11 +52,7 @@
                 <a href="#" class="btn">View</a>
             </div>
 
-            <div class="box">
-                <img src="/Images/book4.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
+            
         </div>
         </div>
     

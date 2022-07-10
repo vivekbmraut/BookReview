@@ -12,7 +12,7 @@
 .heading span {
     background: var(--orange);
     color: #fff;
-    display: inline-block;
+    display: inline-block;  
     padding: .5rem 3rem;
     clip-path: polygon( 100% 0%,93% 50%,100% 99%,0% 100%,7% 50%,0% 0% );
 }
@@ -34,13 +34,16 @@
     text-align: center;
 }
 
-.book .box img{
+.book-cover{
     width:200px;
 }
 
 
-.book .box h3 {
+.book .box .book-title {
     color: var(--black);
     line-height: 1.8;
     font-size: 1.5rem;
+    font-weight:bold;
 }
+
+

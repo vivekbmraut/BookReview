@@ -34,10 +34,10 @@
             </div>
         </div>
     </div>
-    <div class="review-section">
+    <div class="review-section" id="reviewSection" runat="server">
         <div class="review">
-            <h2>Vivek Raut</h2>
-            <p>
+            <h2 class="reviewer-name">Vivek Raut</h2>
+            <p class="r-text">
                 Good Book Read it later
             </p>
             <span class="date">25/06/2022</span> 
@@ -72,9 +72,9 @@
     </div>
     <div class="r-section">
       <div class="r-form">
-      <form action="#" method="post">
-        <textarea class="give-review" rows="5" cols="50" required></textarea><br/>
-        <button type="submit" class="r-btn">Post Review</button><span class="warn">Should be Logged in to write review</span>
+      <form action="#" method="post" id="giveRForm" runat="server">
+        <textarea class="give-review" rows="5" cols="50" id="revTextArea" runat="server" required></textarea><br/>
+        <button type="submit" class="r-btn" id="revBtn" runat="server">Post Review</button><span class="warn">Should be Logged in to write review</span>
       </form >
       </div>
       <div class="r-note">

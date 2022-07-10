@@ -11,8 +11,29 @@ namespace BookReview.Services
 {
     public class BookServices
     {
-
-        public static Book? Get(int bid)
+        public static List<Book>? GetAll()
+        {
+            List<Book> books = new List<Book>();
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = "select bid,book_cover,title from book";
+                MySqlDataReader rdr = (new MySqlCommand(query, conn)).ExecuteReader();
+                while(rdr.Read())
+                {
+                    books.Add(new Book() { bid = rdr.GetInt64("bid"), book_cover = rdr.GetString("book_cover"), title = rdr.GetString("title") });
+                }
+                rdr.Close();
+                conn.Close();
+                return books;
+            }
+            catch(MySqlException)
+            {
+                return null;
+            }
+        }
+        public static Book? Get(long bid)
         {
             try
             {
