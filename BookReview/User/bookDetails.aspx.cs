@@ -61,34 +61,37 @@ namespace BookReview.html
                     {
                         foreach (var revew in reviews)
                         {
-                            HtmlGenericControl reviw = new HtmlGenericControl();
-                            reviw.Attributes.Add("class", "review");
-                            reviw.Style.Add("display", "block");
-
-                            HtmlGenericControl reviewerName = new HtmlGenericControl();
-                            reviewerName.InnerText = revew.reviewer_name;
-                            reviewerName.Attributes.Add("class", "reviewer-name");
-
-                            HtmlGenericControl rText = new HtmlGenericControl();
-                            rText.InnerText = revew.review;
-                            rText.Attributes.Add("class", "r-text");
-
-                            HtmlGenericControl date = new HtmlGenericControl();
-                            date.InnerText = revew.review_date;
-                            date.Attributes.Add("class", "date");
-
-                            reviw.Controls.Add(reviewerName);
-                            reviw.Controls.Add(rText);
-                            reviw.Controls.Add(date);
-
-                            if (Convert.ToInt64(Session["ruid"]) == revew.reviewed_by)
+                            if (revew.is_blocked == 0)
                             {
-                                HtmlGenericControl rBtns = new HtmlGenericControl();
-                                rBtns.Attributes.Add("class", "r-btns");
-                                rBtns.InnerHtml = $"<a href=\"editReview.aspx?revid={revew.revid}\" class=\"rcntl-btn\">Edit</a><a href = \"deleteReview.aspx?revid={revew.revid}&bid={revew.review_for}\" class=\"rcntl-btn\">Delete</a>";
-                                reviw.Controls.Add(rBtns);
+                                HtmlGenericControl reviw = new HtmlGenericControl();
+                                reviw.Attributes.Add("class", "review");
+                                reviw.Style.Add("display", "block");
+
+                                HtmlGenericControl reviewerName = new HtmlGenericControl();
+                                reviewerName.InnerText = revew.reviewer_name;
+                                reviewerName.Attributes.Add("class", "reviewer-name");
+
+                                HtmlGenericControl rText = new HtmlGenericControl();
+                                rText.InnerText = revew.review;
+                                rText.Attributes.Add("class", "r-text");
+
+                                HtmlGenericControl date = new HtmlGenericControl();
+                                date.InnerText = revew.review_date;
+                                date.Attributes.Add("class", "date");
+
+                                reviw.Controls.Add(reviewerName);
+                                reviw.Controls.Add(rText);
+                                reviw.Controls.Add(date);
+
+                                if (Convert.ToInt64(Session["ruid"]) == revew.reviewed_by)
+                                {
+                                    HtmlGenericControl rBtns = new HtmlGenericControl();
+                                    rBtns.Attributes.Add("class", "r-btns");
+                                    rBtns.InnerHtml = $"<a href=\"editReview.aspx?revid={revew.revid}\" class=\"rcntl-btn\">Edit</a><a href = \"deleteReview.aspx?revid={revew.revid}&bid={revew.review_for}\" class=\"rcntl-btn\">Delete</a>";
+                                    reviw.Controls.Add(rBtns);
+                                }
+                                reviewSection.Controls.Add(reviw);
                             }
-                            reviewSection.Controls.Add(reviw);
                         }
                     }
                 }
