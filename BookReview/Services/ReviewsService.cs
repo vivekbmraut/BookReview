@@ -82,6 +82,7 @@ namespace BookReview.Services
                 string query = $"insert into reviews values(NULL,\"{revew.review}\",\"{revew.review_date}\",\"{revew.reviewed_by}\",{revew.review_for},{revew.is_blocked},{revew.block_activity},\"{revew.reviewer_name}\");";
                 var chkInsert = (new MySqlCommand(query, conn)).ExecuteNonQuery();
                 conn.Close();
+                ReviewerService.totalRevUpdt(1, revew.reviewed_by);
                 if (chkInsert > 0)
                     return true;
                 return false;
@@ -120,6 +121,37 @@ namespace BookReview.Services
             }
         }
 
+        public static bool toggleBlock(long revid,int aid)
+        {
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query2 = $"select is_blocked,reviewed_by from reviews where revid={revid};";
+                MySqlDataReader rdr = (new MySqlCommand(query2, conn)).ExecuteReader();
+                rdr.Read();
+                Boolean BLK_FLG = !rdr.GetBoolean("is_blocked");
+                long reviewed_by= rdr.GetInt64("reviewed_by");
+                rdr.Close();
+                string query = $"update reviews set is_blocked={BLK_FLG},block_activity={aid} where revid={revid};";
+                var chkBlk=(new MySqlCommand(query, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (BLK_FLG==false)
+                    ReviewerService.blockCntUpdt(-1,reviewed_by);
+                else
+                    ReviewerService.blockCntUpdt(1, reviewed_by);
+                if (chkBlk > 0)
+                    return true;
+                return false;
+
+            }
+            catch(MySqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
         public static bool Delete(long revid)
         {
             try
@@ -129,6 +161,7 @@ namespace BookReview.Services
                 string query = $"delete from reviews where revid={revid};";
                 var chkDlt = (new MySqlCommand(query, conn)).ExecuteNonQuery();
                 conn.Close();
+                ReviewerService.totalRevUpdt(-1, revid);
                 if (chkDlt > 0)
                     return true;
                 return false;
@@ -141,3 +174,4 @@ namespace BookReview.Services
         }
     }
 }
+

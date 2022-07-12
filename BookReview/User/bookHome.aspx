@@ -10,49 +10,9 @@
         <h1 class="heading">Some <span>books</span></h1>
         <div class="book" id="bookContainer" runat="server">
             
-            <div class="box">
-                <img src="/Images/book1.jpg" alt="Alternate Text" class="book-cover" runat="server"/>
-                <h3 class="book-title">Book Name</h3>
-                <a href="./bookDetails.aspx" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book2.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book3.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book4.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book1.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book2.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book3.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            
+        </div>
+        <div class="page-btns">
+        <a href="#" class="c-btn" id="prevBtn" runat="server">&lt prev</a> <a href="#" class="c-btn" id="nextBtn" runat="server">next &gt</a>
         </div>
         </div>
     

@@ -11,14 +11,26 @@ namespace BookReview.Services
 {
     public class BookServices
     {
-        public static List<Book>? GetAll()
+        public static bool isPage(int page)
+        {
+            MySqlConnection conn = Connection.getConnectString();
+            conn.Open();
+            string query = $"select page from book where page={page}";
+            object rdr = (new MySqlCommand(query, conn)).ExecuteScalar();
+            conn.Close();
+            if (rdr != null)
+                return true;
+            return false;
+        }
+
+        public static List<Book>? GetAllInPage(int page)
         {
             List<Book> books = new List<Book>();
             try
             {
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
-                string query = "select bid,book_cover,title from book";
+                string query = $"select bid,book_cover,title from book where page={page}";
                 MySqlDataReader rdr = (new MySqlCommand(query, conn)).ExecuteReader();
                 while(rdr.Read())
                 {
@@ -124,6 +136,26 @@ namespace BookReview.Services
                 conn.Close();
 
                 return Convert.ToInt64(bidInserted);
+            }
+            catch(MySqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return 0;
+            }
+        }
+
+        public static long Update(Book book)
+        {
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"update book set title=\"{book.title}\",authors=\"{book.authors}\",description=\"{book.description}\",year=\"{book.year}\",edition={book.edition},language=\"{book.language}\",publisher=\"{book.publisher}\",category=\"{book.category}\" where bid={book.bid};";
+                var chkInsert = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (chkInsert > 0)
+                    return book.bid;
+                return 0;
             }
             catch(MySqlException ex)
             {

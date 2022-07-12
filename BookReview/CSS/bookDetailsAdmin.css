@@ -59,6 +59,15 @@
     color:#000; 
     cursor:pointer;
 }
+.img-warn {
+    /*margin: 9px 40%;*/
+    background: red;
+    color: #ffff;
+    font-size: 1.3rem;
+    padding: 2px 0;
+    border-radius: 5px;
+    display: none;
+}
 
 
 .name {
@@ -108,21 +117,25 @@
     margin-bottom:20px;
 }
 
-.review p {
+.review .reviewer-name {
+    font-size:16px;
+    font-weight:bold;
+    padding: 5px 0 9px 2px;
+    display:block;
+}
+
+.review .r-text {
     font-size: 1.5rem;
+    display:block;
     text-transform:none;
 }
 
-.review h2 {
-    padding: 5px 0 9px 2px;
-}
 .date{
     font-style:italic;
     font-weight:bold;
 }
 
 .r-btns{
-
     margin-left:80%;
 }
 

@@ -149,6 +149,57 @@ namespace BookReview.Services
             return false;
         }
 
+        public static bool blockCntUpdt(int blkCnt,long ruid)
+        {
+            try
+            {
+
+                Boolean is_sus = false;
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query1 = $"select blocked_reviews from reviewer where ruid={ruid};";
+                object rdr = (new MySqlCommand(query1, conn)).ExecuteScalar();
+                int blkTtl = Convert.ToInt32(rdr);
+                blkTtl += blkCnt;
+                if (blkTtl >= 3)
+                    is_sus = true;
+                string query2 = $"update reviewer set is_suspended={is_sus},blocked_reviews={blkTtl} where ruid={ruid}";
+                var chkUpDate = (new MySqlCommand(query2, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (chkUpDate > 0)
+                    return true;
+                return false;
+            }
+            catch(MySqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
+
+        public static bool totalRevUpdt(int TtlCnt,long ruid)
+        {
+            try
+            {   
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query1 = $"select total_reviews from reviewer where ruid={ruid};";
+                object rdr = (new MySqlCommand(query1, conn)).ExecuteScalar();
+                int TtlRev = Convert.ToInt32(rdr);
+                TtlRev += TtlCnt;
+                string query2 = $"update reviewer set total_reviews={TtlRev} where ruid={ruid};";
+                var chkUpDate = (new MySqlCommand(query2, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (chkUpDate > 0)
+                    return true;
+                return false;
+            }
+            catch (MySqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
+            }
+        }
 
     }
 }

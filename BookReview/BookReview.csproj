@@ -72,6 +72,8 @@
   <ItemGroup>
     <Content Include="admin\addAdmin.aspx" />
     <Content Include="admin\addBookAdmin.aspx" />
+    <Content Include="admin\blockReview.aspx" />
+    <Content Include="admin\bookEdit.aspx" />
     <Content Include="admin\myProfile.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
@@ -175,6 +177,20 @@
     </Compile>
     <Compile Include="admin\adminHome.Master.designer.cs">
       <DependentUpon>adminHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\blockReview.aspx.cs">
+      <DependentUpon>blockReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\blockReview.aspx.designer.cs">
+      <DependentUpon>blockReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\bookEdit.aspx.cs">
+      <DependentUpon>bookEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\bookEdit.aspx.designer.cs">
+      <DependentUpon>bookEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\myProfile.aspx.cs">
       <DependentUpon>myProfile.aspx</DependentUpon>

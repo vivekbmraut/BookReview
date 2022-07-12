@@ -29,6 +29,7 @@
     padding: 1.5rem 2rem;
     background: #fff;
     border: var(--border);
+    width:300px;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     text-align: center;
@@ -47,3 +48,22 @@
 }
 
 
+.page-btns{
+    margin:10px 40%;
+}
+
+.c-btn{
+    font-size:2rem;
+    color:#ffff;
+    background:var(--orange);
+    border:2px solid var(--orange);
+    margin:0 10px;
+    padding:5px;
+    border-radius:10px;
+}
+
+.c-btn:hover {
+    color:var(--black);
+    background:#ffff;
+    border:2px solid var(--black); 
+}

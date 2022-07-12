@@ -35,41 +35,10 @@
         </div>
     </div>
     <div class="review-section" id="reviewSection" runat="server">
-        <div class="review">
-            <h2 class="reviewer-name">Vivek Raut</h2>
-            <p class="r-text">
-                Good Book Read it later
-            </p>
-            <span class="date">25/06/2022</span> 
-        </div>
-        <div class="review">
-            <h2>Vivek Raut</h2>
-            <p>
-                Good Book Read it later
-            </p>
-            <span class="date">25/06/2022</span>
-        </div>
-        <div class="review">
-            <h2>Vivek Raut</h2>
-            <p>
-                Good Book Read it later
-                Written for experienced Java, C++, or C# programmers who are new to Scala or functional programming, Scala for the Impatient, Second Edition, introduces the key Scala concepts and techniques you need in order to be productive quickly. It is the perfect introduction to the language, particularly for impatient readers who want to learn the fundamentals of Scala so they can start coding quickly. It doesn’t attempt to exhaustively list all the features of the language or make you suffer through long and contrived examples. Instead, carefully crafted examples and hands-on activities guide you through well-defined stages of competency, from basic to expert
-            </p>
-            <span class="date">25/06/2022</span>
-        </div>
-        <div class="review">
-            <h2>Vivek Raut</h2>
-            <p>
-               Written for experienced Java, C++, or C# programmers who are new to Scala or functional programming, Scala for the Impatient, Second Edition, introduces the key Scala concepts and techniques you need in order to be productive quickly. It is the perfect introduction to the language, particularly for impatient readers who want to learn the fundamentals of Scala so they can start coding quickly. It doesn’t attempt to exhaustively list all the features of the language or make you suffer through long and contrived examples. Instead, carefully crafted examples 
-            </p>
-            <span class="date">25/06/2022</span>
-            <span class="r-btns">
-                <a href="#" class="rcntl-btn">Edit</a>
-                <a href="#" class="rcntl-btn">Delete</a>
-            </span>
-        </div>
+        
 
     </div>
+
     <div class="r-section">
       <div class="r-form">
       <form action="#" method="post" id="giveRForm" runat="server">

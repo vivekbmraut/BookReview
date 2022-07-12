@@ -1,18 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="addBookAdmin.aspx.cs" Inherits="BookReview.admin.addBookAdmin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/adminHome.Master" AutoEventWireup="true" CodeBehind="bookEdit.aspx.cs" Inherits="BookReview.admin.bookEdit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/addBook.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="searchAny" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="middle" runat="server">
     <div class="book-details">
-        <div class="flogo"><i class="fa-solid fa-book"></i>Add Book</div>
-     <form name="formBook" action="addBookAdmin.aspx" method="post" runat="server">
+        <div class="flogo"><i class="fa-solid fa-book"></i>Edit Book</div>
+     <form id="editBookForm" method="post" runat="server">
       <div class="title">
         <label>Title</label>
-        <input type="text" class="box" name="title" required>
+        <input type="text" class="box" name="title" id="bookTitle" runat="server" required>
       </div>
       <div class="author">
         <label>Author</label>
-        <input type="text"  class="box" name="authors" required>
+        <input type="text"  class="box" name="authors" id="bookAuthors" runat="server" required>
       </div>
       <div class="description">
         <label>Description</label> 
@@ -21,11 +23,11 @@
       </div>
       <div class="year">
         <label>Publish Year</label>
-        <input type="text"  class="box" name="year" required>
+        <input type="text"  class="box" name="year" id="bookYear" runat="server" required>
       </div>
       <div class="categories">
         <label>Category</label>
-        <select id="category" name="category">
+        <select name="category" id="bookCategory" runat="server">
             <option value="Other">Other</option>
             <option value="Horror">Horror</option>
             <option value="Novel">Novel</option>
@@ -39,18 +41,18 @@
       </div>
       <div class="edition">
         <label>Edition</label>
-        <input type="number" name="edition" required>
+        <input type="number" name="edition" id="bookEdition" runat="server" required>
       </div>
       <div class="publisher">
         <label>Publisher</label>
-        <input type="text" name="publisher">
+        <input type="text" name="publisher" id="bookPublisher" runat="server">
       </div>
       <div class="publisher">
         <label>Language</label>
-        <input type="text" name="language">
+        <input type="text" name="language" id="bookLanguage" runat="server">
       </div>
            <asp:Button Text="Submit" CssClass="sbt-btn" runat="server" />
       </form>
     </div>
-</asp:Content>
 
+</asp:Content>

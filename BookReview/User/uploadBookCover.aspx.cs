@@ -41,9 +41,9 @@ namespace BookReview.user
                     conn.Open();
                     string query = $"update book set book_cover=\"{Request["bid"] + fileExt.ToLower()}\" where bid={Request["bid"]};";
                     var chkUpdate = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                    conn.Close();
                     if (chkUpdate > 0)
                     {
-                        conn.Close();
                         Response.Redirect($"bookDetails.aspx?bid={Request["bid"]}");
                     }
                 }

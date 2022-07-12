@@ -33,14 +33,14 @@
 .book {
   
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
- 
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
     gap: 1rem;
 }
 
 .book .box {
 margin: 0 1rem;
 padding: 3rem 2rem;
+width:300px;
 background: #fff;
 border: var(--border);
 box-shadow: var(--box-shadow);
@@ -48,14 +48,15 @@ border-radius: .5rem;
 text-align: center;
 }
 
-.book .box img{
+.book .box .book-cover{
 width:200px;
 }
 
 
-.book .box h3 {
+.book .box .book-title {
     color: var(--black);
     line-height: 1.8;
+    font-weight:bold;
     font-size: 1.5rem;
 }
 .btn {
@@ -72,4 +73,24 @@ cursor: pointer;
 .btn:hover {
 background: var(--orange);
 color: #fff;
+}
+
+.page-btns{
+    margin:40px 30% 40px 42%;
+}       
+
+.c-btn{
+    font-size:2rem;
+    color:#ffff;
+    background:var(--orange);
+    border:2px solid var(--orange);
+    margin:0 10px;
+    padding:5px;
+    border-radius:10px;
+}
+
+.c-btn:hover {
+    color:var(--black);
+    background:#ffff;
+    border:2px solid var(--black); 
 }

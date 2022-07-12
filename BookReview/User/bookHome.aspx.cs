@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,8 +15,27 @@ namespace BookReview.html
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            var books = BookServices.GetAll();
+            int currPage=1;
+            if(Request["page"]==null || Request["page"]=="1")
+            {
+                prevBtn.Style.Add("display", "none");
+                if (BookServices.isPage(2))
+                    nextBtn.HRef = "bookDetails.aspx?page=2";
+                else
+                    nextBtn.Style.Add("display", "none");
+            }
+            else
+            {
+                currPage = Convert.ToInt32(Request["page"]);
+                prevBtn.HRef = $"bookDetails.aspx?page={currPage - 1}";
+                if (BookServices.isPage(currPage + 1))
+                    nextBtn.HRef = $"bookDetails.aspx?page={currPage+1}";
+                else
+                    nextBtn.Style.Add("display", "none");
+            }
+
+            var books = BookServices.GetAllInPage(currPage);
+
             if (books != null)
             {
                 foreach (var book in books)
