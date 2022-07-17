@@ -48,7 +48,8 @@ namespace BookReview.admin
                             if (revew.is_blocked == 1)
                                 reviw.Style.Add("background", "#fc4d3d");
 
-                            HtmlGenericControl reviewerName = new HtmlGenericControl();
+                            HtmlAnchor reviewerName = new HtmlAnchor();
+                            reviewerName.HRef = $"userProfileView.aspx?ruid={revew.reviewed_by}";
                             reviewerName.InnerText = revew.reviewer_name;
                             reviewerName.Attributes.Add("class", "reviewer-name");
 

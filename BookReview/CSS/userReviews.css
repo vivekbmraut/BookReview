@@ -28,9 +28,10 @@
     margin-bottom:20px;
 }
 
-.review p {
+.review .r-text {
     font-size: 1.5rem;
     text-transform:none;
+    display:block;
 }
 
 .review h2 {

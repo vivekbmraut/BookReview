@@ -35,6 +35,29 @@ namespace BookReview.Services
                 return null; 
             }
         }
+        public static List<Reviews>? GetByReviewer(long ruid)
+        {
+            try
+            {
+                List<Reviews> bookReviews = new List<Reviews>();
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"select * from reviews where review_by={ruid};";
+
+                MySqlDataReader rdr = (new MySqlCommand(query, conn)).ExecuteReader();
+                while (rdr.Read())
+                {
+                    bookReviews.Add(new Reviews() { revid = rdr.GetInt64("revid"), review = rdr.GetString("review"), review_date = rdr.GetString("review_date").Split(' ')[0], review_for = rdr.GetInt64("review_for"), is_blocked = rdr.GetInt32("is_blocked"), reviewer_name = rdr.GetString("reviewer_name"), reviewed_by = rdr.GetInt64("reviewed_by") });
+                }
+                rdr.Close();
+                conn.Close();
+                return bookReviews;
+            }
+            catch (MySqlException ex)
+            {
+                return null;
+            }
+        }
 
         public static Reviews? GetById(long revid)
         {

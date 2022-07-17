@@ -47,6 +47,29 @@ namespace BookReview.Services
             }
         }
 
+        public static List<Book>? GetAllInReviewer(long ruid)
+        {
+            List<Book> books = new List<Book>();
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"select bid,book_cover,title from book where ruid={ruid}";
+                MySqlDataReader rdr = (new MySqlCommand(query, conn)).ExecuteReader();
+                while (rdr.Read())
+                {
+                    books.Add(new Book() { bid = rdr.GetInt64("bid"), book_cover = rdr.GetString("book_cover"), title = rdr.GetString("title") });
+                }
+                rdr.Close();
+                conn.Close();
+                return books;
+            }
+            catch (MySqlException)
+            {
+                return null;
+            }
+        }
+
         public static List<Book>? GetAllInCategory(int cat)
         {
             string[] categories = {"Horror","Novel","Biography","Fiction","Comedy","Sports","History","Education","Other"};
