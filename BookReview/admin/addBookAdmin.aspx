@@ -29,7 +29,7 @@
             <option value="Other">Other</option>
             <option value="Horror">Horror</option>
             <option value="Novel">Novel</option>
-            <option value="Action">Action</option>
+            <option value="Fiction">Fiction</option>
             <option value="Comedy">Comedy</option>
             <option value="History">History</option>
             <option value="Education">Education</option>

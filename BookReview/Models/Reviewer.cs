@@ -15,6 +15,5 @@ namespace BookReview.Models
         public long total_reviews { get; set; }
         public int blocked_reviews { get; set; }
         public int is_suspended { get; set; }
-        public int page { get; set; }
     }
 }

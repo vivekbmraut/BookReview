@@ -74,6 +74,7 @@
     <Content Include="admin\addBookAdmin.aspx" />
     <Content Include="admin\blockReview.aspx" />
     <Content Include="admin\bookEdit.aspx" />
+    <Content Include="admin\deleteBook.aspx" />
     <Content Include="admin\myProfile.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
@@ -88,7 +89,18 @@
     <Content Include="admin\userReviews.aspx" />
     <Content Include="admin\userView.aspx" />
     <Content Include="bookCovers\*.png" />
-    <Content Include="bookCovers\*.jpg" />
+    <Content Include="bookCovers\1.jpg" />
+    <Content Include="bookCovers\10.jpg" />
+    <Content Include="bookCovers\11.jpg" />
+    <Content Include="bookCovers\12.jpg" />
+    <Content Include="bookCovers\13.jpg" />
+    <Content Include="bookCovers\3.jpg" />
+    <Content Include="bookCovers\4.jpg" />
+    <Content Include="bookCovers\5.jpg" />
+    <Content Include="bookCovers\6.jpg" />
+    <Content Include="bookCovers\7.jpg" />
+    <Content Include="bookCovers\8.jpg" />
+    <Content Include="bookCovers\9.jpg" />
     <Content Include="bookCovers\*.jpeg" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
@@ -191,6 +203,13 @@
     </Compile>
     <Compile Include="admin\bookEdit.aspx.designer.cs">
       <DependentUpon>bookEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\deleteBook.aspx.cs">
+      <DependentUpon>deleteBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\deleteBook.aspx.designer.cs">
+      <DependentUpon>deleteBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\myProfile.aspx.cs">
       <DependentUpon>myProfile.aspx</DependentUpon>

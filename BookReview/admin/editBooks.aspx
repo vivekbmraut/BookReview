@@ -14,42 +14,6 @@
     <a href="addBookAdmin.aspx"><div class="addbk-btn"><i class="fa-solid fa-plus"></i>Add Book</div></a>    
     <div class="book" id="bookContainer" runat="server">
             
-            <div class="box">
-                <img src="/Images/book1.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="./bookDetailsAdmin.aspx" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book2.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book3.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book4.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book1.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-
-            <div class="box">
-                <img src="/Images/book2.jpg" alt="Alternate Text" />
-                <h3>Book Name</h3>
-                <a href="#" class="btn">View</a>
-            </div>
-            
         </div>
         <div class="page-btns">
         <a href="#" class="c-btn" id="prevBtn" runat="server">&lt prev</a> <a href="#" class="c-btn" id="nextBtn" runat="server">next &gt</a>

@@ -25,7 +25,7 @@
 
      <div class="box">
                 <img src="/Images/category3.jpg" alt="Alternate Text" />
-                <<h2 class="heading"><span>Action</span></h2>
+                <<h2 class="heading"><span>Fiction</span></h2>
                 <a href="./categorizedBooks.aspx?cat=4" class="btn">view</a>
             </div>
 

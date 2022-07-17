@@ -6,6 +6,7 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using BookReview.Models;
 using BookReview.Services;
+using System.IO;
 
 namespace BookReview.Services
 {
@@ -48,7 +49,7 @@ namespace BookReview.Services
 
         public static List<Book>? GetAllInCategory(int cat)
         {
-            string[] categories = {"Horror","Novel","Biography","Action","Comedy","Sports","History","Education","Other"};
+            string[] categories = {"Horror","Novel","Biography","Fiction","Comedy","Sports","History","Education","Other"};
             List<Book> books = new List<Book>();
             try
             {
@@ -118,6 +119,7 @@ namespace BookReview.Services
 
         public static long Add(Book book)
         {
+            long bid=0;
             try
             {
                 MySqlConnection conn = Connection.getConnectString();
@@ -128,8 +130,8 @@ namespace BookReview.Services
 
                 object getPage = (new MySqlCommand("select page from book order by page limit 1;", conn)).ExecuteScalar();
                 object countPage = (new MySqlCommand($"select count(page) from book where page={getPage};", conn)).ExecuteScalar();
-                
-                if (Convert.ToInt32(countPage) <= 10)
+
+                if (Convert.ToInt32(countPage) < 10)
                 {
                     book.page = Convert.ToInt32(getPage);
                 }
@@ -148,18 +150,18 @@ namespace BookReview.Services
                 }
                 
                 var chkInsert = (new MySqlCommand(query, conn)).ExecuteNonQuery();
-                if(chkInsert==0)
+                if (chkInsert > 0)
                 {
-                    return 0;
-                }
-                string query2 = "select bid from book order by bid desc limit 1;";
-                object bidInserted = (new MySqlCommand(query2, conn)).ExecuteScalar();
 
+                    string query2 = "select bid from book order by bid desc limit 1;";
+                    object bidInserted = (new MySqlCommand(query2, conn)).ExecuteScalar();
+                    bid= Convert.ToInt64(bidInserted);
+                }
                 //UNLOCK TABLE
                 (new MySqlCommand("UNLOCK TABLES", conn)).ExecuteNonQuery();
                 conn.Close();
 
-                return Convert.ToInt64(bidInserted);
+                return bid;
             }
             catch(MySqlException ex)
             {
@@ -185,6 +187,50 @@ namespace BookReview.Services
             {
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return 0;
+            }
+        }
+
+        public static bool Delete(long bid)
+        {
+            try
+            {
+                bool flag = false;
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query1 = $"select book_cover,page from book where bid={bid}";
+                MySqlDataReader rdr = (new MySqlCommand(query1, conn)).ExecuteReader();
+
+                if (rdr.Read())
+                {
+                    int delPage = rdr.GetInt32("page");
+                    string bookCoverPath = rdr.GetString("book_cover");
+                    rdr.Close();
+                    (new MySqlCommand("LOCK TABLES book WRITE", conn)).ExecuteNonQuery();
+
+                    var chDel = (new MySqlCommand($"delete from book where bid={bid}", conn)).ExecuteNonQuery();
+                    if (chDel > 0)
+                    {
+                        string query = $"select page from book where page={delPage+1}";
+                        object rd = (new MySqlCommand(query, conn)).ExecuteScalar();
+                        if (rd!=null)
+                        {
+                            string query2 = $"select bid from book order by bid desc limit 1;";
+                            object lastBid = (new MySqlCommand(query2, conn)).ExecuteScalar();
+                            var checkDel = new MySqlCommand($"update book set page={delPage} where bid={lastBid};", conn).ExecuteNonQuery();
+                            if (checkDel > 0)
+                                flag = true;
+                        }
+                    }
+                (new MySqlCommand("UNLOCK TABLES", conn)).ExecuteNonQuery();
+                }
+                
+                conn.Close();
+                return flag;
+            }
+            catch(MySqlException ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
+                return false;
             }
         }
     }

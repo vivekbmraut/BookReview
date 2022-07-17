@@ -15,7 +15,7 @@ namespace BookReview.user
         protected void Page_Load(object sender, EventArgs e)
         {
             int cat = Convert.ToInt32(Request["cat"]);
-            string[] categories = { "Horror", "Novel", "Biography", "Action", "Comedy", "Sports", "History", "Education", "Other" };
+            string[] categories = { "Horror", "Novel", "Biography", "Fiction", "Comedy", "Sports", "History", "Education", "Other" };
 
             catRibbon.InnerText = categories[cat-1];
             var books = BookServices.GetAllInCategory(cat);

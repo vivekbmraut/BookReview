@@ -35,6 +35,7 @@ namespace BookReview.admin
                     publisher.InnerText = book.publisher;
 
                     editBtn.HRef = $"bookEdit.aspx?bid={currBid}";
+                    delBtn.HRef = $"deleteBook.aspx?bid={currBid}";
 
                     var reviews = ReviewsService.GetByBook(currBid);
                     if (reviews != null)

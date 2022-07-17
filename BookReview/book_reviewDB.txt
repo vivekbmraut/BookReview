@@ -25,7 +25,7 @@ insert into admin values(NULL,'Vivek Raut','vivekad@gmail.com',SHA2('vivek123',2
 								| Reviewer Table |
 --------------------------------+----------------+-----------------------------
 
-create table reviewer(ruid bigint primary key AUTO_INCREMENT,name varchar(50),email varchar(255) Unique,password varchar(255),profile_pic varchar(255),total_reviews bigint,blocked_reviews tinyint,is_suspended tinyint,page int,Constraint chk_is_suspended CHECK(is_suspended=0 or is_suspended=1));
+create table reviewer(ruid bigint primary key AUTO_INCREMENT,name varchar(50),email varchar(255) Unique,password varchar(255),profile_pic varchar(255),total_reviews bigint,blocked_reviews tinyint,is_suspended tinyint,Constraint chk_is_suspended CHECK(is_suspended=0 or is_suspended=1));
 
 insert into reviewer values(NULL,"Varad Rakshe","varad11@gmail.com",SHA2("varad123",224),"default.png",0,0,0,1)
 
@@ -40,15 +40,14 @@ insert into reviewer values(NULL,"Varad Rakshe","varad11@gmail.com",SHA2("varad1
 | total_reviews   | bigint       | YES  |     | NULL    |                |
 | blocked_reviews | tinyint      | YES  |     | NULL    |                |
 | is_suspended    | tinyint      | YES  |     | NULL    |                |
-| page            | int          | YES  |     | NULL    |                |
 +-----------------+--------------+------+-----+---------+----------------+
 
 
 +------+------------------+---------------------+----------------------------------------------------------+-------------+---------------+-----------------+--------------+------+
-| ruid | name             | email               | password                                                 | profile_pic | total_reviews | blocked_reviews | is_suspended | page |
+| ruid | name             | email               | password                                                 | profile_pic | total_reviews | blocked_reviews | is_suspended |
 +------+------------------+---------------------+----------------------------------------------------------+-------------+---------------+-----------------+--------------+------+
-|    1 | Varad Rakshe     | varad11@gmail.com   | 52d5cd3128bafca35e44498b35a67df8c7e2217f2e8364fca93e8c49 | default.png |             0 |               0 |            0 |    1 |
-|    2 | Harshal Thombare | harshal13@gmail.com | 5501c43035c67d1605b6986170bb9fb4ac52070043994937e05b4df4 | default.png |             0 |               0 |            0 |    1 |
+|    1 | Varad Rakshe     | varad11@gmail.com   | 52d5cd3128bafca35e44498b35a67df8c7e2217f2e8364fca93e8c49 | default.png |             0 |               0 |            0 |
+|    2 | Harshal Thombare | harshal13@gmail.com | 5501c43035c67d1605b6986170bb9fb4ac52070043994937e05b4df4 | default.png |             0 |               0 |            0 |
 +------+------------------+---------------------+----------------------------------------------------------+-------------+---------------+-----------------+--------------+------+
 
 
