@@ -90,6 +90,28 @@ namespace BookReview.Services
             return null;
         }
 
+        public static bool Delete(int aid)
+        {
+
+            try
+            {
+                MySqlConnection conn = Connection.getConnectString();
+                conn.Open();
+                string query = $"delete from admin where aid=\"{aid}\" ";
+
+                var chDelete = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                conn.Close();
+                if (chDelete == 0)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch (MySqlException ex) { return true; } 
+            
+        }
+
         public static Boolean Add(Admin admin)
         {
             try

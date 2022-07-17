@@ -3,7 +3,7 @@
     <link href="../CSS/login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
-     <form id="loginform" action="#" class="login-form" runat="server">
+     <form id="loginform" action="login.aspx" class="login-form" method="post" runat="server">
         <h3>Login<i class="fas fa-user"></i></h3>
         
         <input type="email" placeholder="Enter email id" id="EmailInput" class="box" runat="server" required/>
@@ -16,5 +16,8 @@
     </form>
     <div class="error" id="ErrorDiv" runat="server">
         Incorrect email or password
+    </div>
+    <div class="error" id="SusWarn" runat="server">
+        Your Account is suspended due malicious activity! 
     </div>
 </asp:Content>

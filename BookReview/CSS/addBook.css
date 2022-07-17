@@ -31,7 +31,7 @@
 }
 .book-details input {
 	border-radius:5px;
-	padding:1rem 0;
+	padding:1rem 1rem;
 	font-size:1.5rem;
 	border:1px solid var(--orange);
 }
@@ -55,6 +55,8 @@
 .book-details .description .desc{
 	border:1px solid var(--orange);
 	border-radius:5px;
+	padding:1rem 1rem;
+	text-transform:none;
 }
 
 .req-validator{

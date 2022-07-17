@@ -39,7 +39,7 @@ namespace BookReview.admin
 
                     HtmlGenericControl cardBtns = new HtmlGenericControl();
                     cardBtns.Attributes.Add("class", "btn-section");
-                    cardBtns.InnerHtml= "<a href=\"#\" class=\"ad-btns\">Delete</a>";
+                    cardBtns.InnerHtml= $"<a href=\"deleteAdmin.aspx?aid={ad.aid}\" class=\"ad-btns\">Delete</a>";
                     cardBtns.Style.Add("display", "block");
                     card.Controls.Add(cardPic);
                     card.Controls.Add(cardName);
