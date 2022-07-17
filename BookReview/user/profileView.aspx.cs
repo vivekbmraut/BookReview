@@ -21,8 +21,6 @@ namespace BookReview.user
                 rEmail.InnerText = reviewer.email;
                 rTotalRev.InnerText = reviewer.total_reviews.ToString();
                 rBlockRev.InnerText = reviewer.blocked_reviews.ToString();
-                myRev.Attributes.Add("href", $"./MyReviews.aspx?ruid={reviewer.ruid}");
-                myBk.Attributes.Add("href", $"./MyBooks.aspx?ruid={reviewer.ruid}");
             }
         }
 
