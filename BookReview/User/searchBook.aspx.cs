@@ -9,14 +9,15 @@ using BookReview.Services;
 
 namespace BookReview.user
 {
-    public partial class MyBooks : System.Web.UI.Page
+    public partial class searchBook : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ruid"] != null)
+            if (Request["title"] != null)
             {
-                long currRuid = Convert.ToInt64(Session["ruid"]);
-                var books = BookServices.GetAllInReviewer(currRuid);
+                string searchQuery = Request["title"].ToString();
+                var books = BookServices.GetAllInSearch(searchQuery);
+
                 if (books != null)
                 {
                     foreach (var book in books)
@@ -33,7 +34,7 @@ namespace BookReview.user
                         HtmlAnchor btn = new HtmlAnchor();
                         btn.Attributes.Add("class", "btn");
                         btn.Style.Add("display", "block");
-                        btn.HRef = $"bookDetailsAdmin.aspx?bid={book.bid}";
+                        btn.HRef = $"bookDetails.aspx?bid={book.bid}";
                         btn.InnerText = "View";
                         box.Controls.Add(bookImage);
                         box.Controls.Add(bookTitle);

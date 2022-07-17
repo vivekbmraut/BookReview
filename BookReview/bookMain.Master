@@ -28,9 +28,10 @@
             <div class="fas fa-search" id="search-btn"></div>
             <a href="~/user/login.aspx" id="loginLink" runat="server"><div class="fas fa-user" id="btn" runat="server"></div></a>
         </div>
-        <form  class="search-form" action="#" >
-            <input type="search" id="search-box" placeholder="search Book" />
+        <form  class="search-form" action="searchBook.aspx" method="get">
+            <input type="search" name="title" placeholder="search Book" />
             <label for="search-box" class="fas fa-search"></label>
+            <input type="submit" id="search-box" style="display:none">
         </form>
 
     </header>

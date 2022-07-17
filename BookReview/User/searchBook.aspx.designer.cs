@@ -11,16 +11,16 @@ namespace BookReview.user
 {
 
 
-    public partial class MyReviews
+    public partial class searchBook
     {
 
         /// <summary>
-        /// reviewSection control.
+        /// bookContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl reviewSection;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bookContainer;
     }
 }

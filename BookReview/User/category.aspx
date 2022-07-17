@@ -44,7 +44,7 @@
      <div class="box">
                 <img src="/Images/category8.jpg" alt="Alternate Text" />
                 <h2 class="heading"><span>History</span></h2>
-                <a href="./categorizedBooks.aspx?cat7" class="btn">view</a>
+                <a href="./categorizedBooks.aspx?cat=7" class="btn">view</a>
          </div>
 
      <div class="box">

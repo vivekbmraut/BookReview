@@ -164,6 +164,7 @@
     <Content Include="JS\script.js" />
     <Content Include="user\category.aspx" />
     <Content Include="user\feedback.aspx" />
+    <Content Include="user\searchBook.aspx" />
     <Content Include="user\uploadBookCover.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
@@ -409,6 +410,13 @@
     </Compile>
     <Compile Include="user\feedback.aspx.designer.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\searchBook.aspx.cs">
+      <DependentUpon>searchBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\searchBook.aspx.designer.cs">
+      <DependentUpon>searchBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\uploadBookCover.aspx.cs">
       <DependentUpon>uploadBookCover.aspx</DependentUpon>

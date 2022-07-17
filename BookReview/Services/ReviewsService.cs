@@ -42,7 +42,7 @@ namespace BookReview.Services
                 List<Reviews> bookReviews = new List<Reviews>();
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
-                string query = $"select * from reviews where review_by={ruid};";
+                string query = $"select * from reviews where reviewed_by={ruid};";
 
                 MySqlDataReader rdr = (new MySqlCommand(query, conn)).ExecuteReader();
                 while (rdr.Read())
@@ -55,6 +55,7 @@ namespace BookReview.Services
             }
             catch (MySqlException ex)
             {
+                System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return null;
             }
         }
@@ -179,12 +180,19 @@ namespace BookReview.Services
         {
             try
             {
+                object? rdr=null;
                 MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
                 string query = $"delete from reviews where revid={revid};";
+                string query2 = $"select reviewed_by from reviews where revid={revid};";
                 var chkDlt = (new MySqlCommand(query, conn)).ExecuteNonQuery();
+                if(chkDlt>0)
+                {
+                    rdr=(new MySqlCommand(query2, conn)).ExecuteScalar();
+                }
                 conn.Close();
-                ReviewerService.totalRevUpdt(-1, revid);
+                if(rdr!=null)
+                ReviewerService.totalRevUpdt(-1, Convert.ToInt64(rdr));
                 if (chkDlt > 0)
                     return true;
                 return false;

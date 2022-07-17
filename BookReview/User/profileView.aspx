@@ -22,8 +22,8 @@
       Reviews given:<span id="rTotalRev" runat="server">4</span><br/>
       Blocked Reviews:<span id="rBlockRev" runat="server">2</span>
     </div>
-      <a href="MyReviews.aspx" id="myRev" runat="server"><div class="ed-link">View Reviews</div></a>
-      <a href="MyBooks.aspx" id="myBk" runat="server"><div class="ed-link">View Books</div></a>
+      <a href="MyReviews.aspx"><div class="ed-link">View Reviews</div></a>
+      <a href="MyBooks.aspx"><div class="ed-link">View Books</div></a>
       <a href="logout.aspx"><div class="logout">Logout</div></a>
     </div>
     <script src="../JS/profileView.js"></script>

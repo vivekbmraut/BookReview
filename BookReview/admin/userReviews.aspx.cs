@@ -17,7 +17,7 @@ namespace BookReview.admin
             {
                 string[] blk = { "Block", "Unblock" };
                 long currRuid = Convert.ToInt64(Request["ruid"]);
-                var reviews = ReviewsService.GetByBook(currRuid);
+                var reviews = ReviewsService.GetByReviewer(currRuid);
                 userName.InnerText = reviews[0].reviewer_name;
                 if (reviews != null)
                 {

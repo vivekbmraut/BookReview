@@ -167,7 +167,7 @@ namespace BookReview.Services
                 string query1 = $"select total_reviews from reviewer where ruid={ruid};";
                 object rdr = (new MySqlCommand(query1, conn)).ExecuteScalar();
                 int TtlRev = Convert.ToInt32(rdr);
-                TtlRev += TtlCnt;
+                TtlRev =TtlRev + TtlCnt;
                 string query2 = $"update reviewer set total_reviews={TtlRev} where ruid={ruid};";
                 var chkUpDate = (new MySqlCommand(query2, conn)).ExecuteNonQuery();
                 conn.Close();
