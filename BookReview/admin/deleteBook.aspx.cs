@@ -13,7 +13,8 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             if (Request["bid"] != null)
             {
                 long currbid = Convert.ToInt64(Request["bid"]);

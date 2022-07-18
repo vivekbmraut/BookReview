@@ -11,7 +11,7 @@ namespace BookReview.admin
 {
 
 
-    public partial class adminProfileView
+    public partial class myProf
     {
 
         /// <summary>

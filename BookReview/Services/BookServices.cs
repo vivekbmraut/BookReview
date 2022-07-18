@@ -166,9 +166,9 @@ namespace BookReview.Services
         public static long Add(Book book)
         {
             long bid=0;
+            MySqlConnection conn = Connection.getConnectString();
             try
             {
-                MySqlConnection conn = Connection.getConnectString();
                 conn.Open();
 
                 //LOCK TABLE
@@ -211,6 +211,8 @@ namespace BookReview.Services
             }
             catch(MySqlException ex)
             {
+                (new MySqlCommand("UNLOCK TABLES", conn)).ExecuteNonQuery();
+                conn.Close();
                 System.Windows.Forms.MessageBox.Show(ex.ToString());
                 return 0;
             }

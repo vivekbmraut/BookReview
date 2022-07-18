@@ -12,6 +12,8 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             var reviewer = ReviewerService.Get(Convert.ToInt64(Request["ruid"]));
             if (reviewer != null)
             {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="loginAdmin.aspx.cs" Inherits="BookReview.admin.loginAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BookReview.admin.loginAdmin" %>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../CSS/loginAdmin.css" />
 </head>
 <body>
-    <form id="adminForm" runat="server" class="login-form" action="loginAdmin.aspx" method="post">
+    <form id="adminForm" runat="server" class="login-form" action="Default.aspx" method="post">
         <h3><i class="fas fa-user-shield"></i>Admin</h3>
         <input type="text" placeholder="Email" id="EmailInput" class="box" runat="server" required/>
         <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email Id" ControlToValidate="EmailInput" CssClass="validator"  runat="server" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />

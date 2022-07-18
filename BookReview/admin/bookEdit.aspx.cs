@@ -13,7 +13,9 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack)
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
+            if (IsPostBack)
             {
                 Book book = new Book();
                 book.bid = Convert.ToInt64(Request["bid"]);

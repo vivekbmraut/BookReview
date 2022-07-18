@@ -13,6 +13,8 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             int currPage = 1;
             if (Request["page"] == null || Request["page"] == "1")
             {

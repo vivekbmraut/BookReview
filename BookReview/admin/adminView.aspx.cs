@@ -14,42 +14,45 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             List<Admin> admins = AdminService.Getall();
             if(admins!=null)
             {
                 foreach(var ad in admins)
                 {
-                    HtmlGenericControl card = new HtmlGenericControl();
-                    card.Attributes.Add("class", "admin-card");
-                    
-                    HtmlGenericControl cardPic = new HtmlGenericControl();
-                    cardPic.Attributes.Add("class", "profile-image");
-                    cardPic.Style.Add("display", "block");
-                    cardPic.Style.Add("background-image", $"url(./profilePictures/{ad.profile_pic})");
-                    
-                    HtmlGenericControl cardName = new HtmlGenericControl();
-                    cardName.Attributes.Add("class","ad-name");
-                    cardName.InnerText = ad.name;
-                    cardName.Style.Add("display", "block");
-                    
-                    HtmlGenericControl cardEmail = new HtmlGenericControl();
-                    cardEmail.Attributes.Add("class", "ad-email");
-                    cardEmail.InnerText = ad.email;
-                    cardEmail.Style.Add("display", "block");
+                    if (Convert.ToInt32(Session["aid"]) != ad.aid)
+                    {
+                        HtmlGenericControl card = new HtmlGenericControl();
+                        card.Attributes.Add("class", "admin-card");
 
-                    HtmlGenericControl cardBtns = new HtmlGenericControl();
-                    cardBtns.Attributes.Add("class", "btn-section");
-                    cardBtns.InnerHtml= $"<a href=\"deleteAdmin.aspx?aid={ad.aid}\" class=\"ad-btns\">Delete</a>";
-                    cardBtns.Style.Add("display", "block");
-                    card.Controls.Add(cardPic);
-                    card.Controls.Add(cardName);
-                    card.Controls.Add(cardEmail);
-                    card.Controls.Add(cardBtns);
-                    adminCardContainer.Controls.Add(card);
+                        HtmlGenericControl cardPic = new HtmlGenericControl();
+                        cardPic.Attributes.Add("class", "profile-image");
+                        cardPic.Style.Add("display", "block");
+                        cardPic.Style.Add("background-image", $"url(./profilePictures/{ad.profile_pic})");
+
+                        HtmlGenericControl cardName = new HtmlGenericControl();
+                        cardName.Attributes.Add("class", "ad-name");
+                        cardName.InnerText = ad.name;
+                        cardName.Style.Add("display", "block");
+
+                        HtmlGenericControl cardEmail = new HtmlGenericControl();
+                        cardEmail.Attributes.Add("class", "ad-email");
+                        cardEmail.InnerText = ad.email;
+                        cardEmail.Style.Add("display", "block");
+
+                        HtmlGenericControl cardBtns = new HtmlGenericControl();
+                        cardBtns.Attributes.Add("class", "btn-section");
+                        cardBtns.InnerHtml = $"<a href=\"deleteAdmin.aspx?aid={ad.aid}\" class=\"ad-btns\">Delete</a>";
+                        cardBtns.Style.Add("display", "block");
+                        card.Controls.Add(cardPic);
+                        card.Controls.Add(cardName);
+                        card.Controls.Add(cardEmail);
+                        card.Controls.Add(cardBtns);
+                        adminCardContainer.Controls.Add(card);
+                    }
                 }
             }
-            
-
         }
     }
 }

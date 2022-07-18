@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bookMain.Master" AutoEventWireup="true" CodeBehind="addBook.aspx.cs" Inherits="BookReview.user.addBook" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../CSS/addBook.css" rel="stylesheet" />
+    <link href="./CSS/addBook.css" rel="stylesheet" />
 </asp:Content>
 
 

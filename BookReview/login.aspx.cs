@@ -24,7 +24,7 @@ namespace BookReview.user
                 {
                     string query2 = $"select is_suspended from reviewer where ruid={red.ToString()}";
                     conn.Open();
-                    object is_sus = (new MySqlCommand(query, conn)).ExecuteScalar();
+                    object is_sus = (new MySqlCommand(query2, conn)).ExecuteScalar();
                     conn.Close();
                     if (Convert.ToInt32(is_sus)==1)
                     {

@@ -76,11 +76,11 @@
     <Content Include="admin\bookEdit.aspx" />
     <Content Include="admin\deleteAdmin.aspx" />
     <Content Include="admin\deleteBook.aspx" />
-    <Content Include="admin\myProfile.aspx" />
     <Content Include="admin\adminView.aspx" />
     <Content Include="admin\bookDetailsAdmin.aspx" />
-    <Content Include="admin\loginAdmin.aspx" />
+    <Content Include="admin\Default.aspx" />
     <Content Include="admin\logout.aspx" />
+    <Content Include="admin\myProf.aspx" />
     <Content Include="admin\profilePictures\*.png" />
     <Content Include="admin\profilePictures\*.jpg" />
     <Content Include="admin\profilePictures\*.jpeg" />
@@ -91,18 +91,7 @@
     <Content Include="admin\userReviews.aspx" />
     <Content Include="admin\userView.aspx" />
     <Content Include="bookCovers\*.png" />
-    <Content Include="bookCovers\1.jpg" />
-    <Content Include="bookCovers\10.jpg" />
-    <Content Include="bookCovers\11.jpg" />
-    <Content Include="bookCovers\12.jpg" />
-    <Content Include="bookCovers\13.jpg" />
-    <Content Include="bookCovers\3.jpg" />
-    <Content Include="bookCovers\4.jpg" />
-    <Content Include="bookCovers\5.jpg" />
-    <Content Include="bookCovers\6.jpg" />
-    <Content Include="bookCovers\7.jpg" />
-    <Content Include="bookCovers\8.jpg" />
-    <Content Include="bookCovers\9.jpg" />
+    <Content Include="bookCovers\*.jpg" />
     <Content Include="bookCovers\*.jpeg" />
     <Content Include="CSS\addAdmin.css" />
     <Content Include="CSS\addBook.css" />
@@ -125,7 +114,6 @@
     <Content Include="CSS\category.css" />
     <Content Include="CSS\userReviews.css" />
     <Content Include="CSS\userView.css" />
-    <Content Include="Images\category1.jpg" />
     <Content Include="Images\category10.jpg" />
     <Content Include="Images\category2.jpg" />
     <Content Include="Images\category3.jpg" />
@@ -138,36 +126,27 @@
     <Content Include="JS\adminHome.js" />
     <Content Include="JS\bookDetailsAdmin.js" />
     <Content Include="JS\profileView.js" />
-    <Content Include="user\addBook.aspx" />
-    <Content Include="user\categorizedBooks.aspx" />
-    <Content Include="user\deleteReview.aspx" />
-    <Content Include="user\editReview.aspx" />
-    <Content Include="user\login.aspx" />
-    <Content Include="user\logout.aspx" />
-    <Content Include="user\MyBooks.aspx" />
-    <Content Include="user\MyReviews.aspx" />
-    <Content Include="user\profilePictures\*.png" />
+    <Content Include="addBook.aspx" />
+    <Content Include="categorizedBooks.aspx" />
+    <Content Include="deleteReview.aspx" />
+    <Content Include="editReview.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="MyBooks.aspx" />
+    <Content Include="MyReviews.aspx" />
+    <Content Include="user\profilePictures\default.png" />
     <Content Include="user\profilePictures\*.jpg" />
-    <Content Include="user\profilePictures\*.jpeg" />
-    <Content Include="user\profileView.aspx" />
-    <Content Include="user\registerNotice.aspx" />
-    <Content Include="user\registerPage.aspx" />
-    <Content Include="temps\bookDisplay.html" />
-    <Content Include="user\bookHome.aspx" />
-    <Content Include="temps\HtmlPage1.html" />
-    <Content Include="user\bookDetails.aspx" />
-    <Content Include="Images\book1.jpg" />
-    <Content Include="Images\book1test.jpg" />
-    <Content Include="Images\book1u2-1.jpg" />
-    <Content Include="Images\book2.jpg" />
-    <Content Include="Images\book3.jpg" />
-    <Content Include="Images\book4.jpg" />
-    <Content Include="Images\Scala.jpg" />
+    <Content Include="user\profilePictures\1.jpeg" />
+    <Content Include="profileView.aspx" />
+    <Content Include="registerNotice.aspx" />
+    <Content Include="registerPage.aspx" />
+    <Content Include="bookHome.aspx" />
+    <Content Include="bookDetails.aspx" />
     <Content Include="JS\script.js" />
-    <Content Include="user\category.aspx" />
-    <Content Include="user\feedback.aspx" />
-    <Content Include="user\searchBook.aspx" />
-    <Content Include="user\uploadBookCover.aspx" />
+    <Content Include="category.aspx" />
+    <Content Include="feedback.aspx" />
+    <Content Include="searchBook.aspx" />
+    <Content Include="uploadBookCover.aspx" />
     <Content Include="Web.config" />
     <Content Include="Registeration.aspx" />
   </ItemGroup>
@@ -221,13 +200,6 @@
     <Compile Include="admin\deleteBook.aspx.designer.cs">
       <DependentUpon>deleteBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\myProfile.aspx.cs">
-      <DependentUpon>myProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\myProfile.aspx.designer.cs">
-      <DependentUpon>myProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="admin\adminView.aspx.cs">
       <DependentUpon>adminView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -242,12 +214,12 @@
     <Compile Include="admin\bookDetailsAdmin.aspx.designer.cs">
       <DependentUpon>bookDetailsAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\loginAdmin.aspx.cs">
-      <DependentUpon>loginAdmin.aspx</DependentUpon>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\loginAdmin.aspx.designer.cs">
-      <DependentUpon>loginAdmin.aspx</DependentUpon>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\editBooks.aspx.cs">
       <DependentUpon>editBooks.aspx</DependentUpon>
@@ -262,6 +234,13 @@
     </Compile>
     <Compile Include="admin\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\myProf.aspx.cs">
+      <DependentUpon>myProf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\myProf.aspx.designer.cs">
+      <DependentUpon>myProf.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\searchBook.aspx.cs">
       <DependentUpon>searchBook.aspx</DependentUpon>
@@ -314,95 +293,95 @@
     <Compile Include="Services\BookServices.cs" />
     <Compile Include="Services\ReviewerService.cs" />
     <Compile Include="Services\ReviewsService.cs" />
-    <Compile Include="user\addBook.aspx.cs">
+    <Compile Include="addBook.aspx.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\addBook.aspx.designer.cs">
+    <Compile Include="addBook.aspx.designer.cs">
       <DependentUpon>addBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\bookHome.aspx.cs">
+    <Compile Include="bookHome.aspx.cs">
       <DependentUpon>bookHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\bookHome.aspx.designer.cs">
+    <Compile Include="bookHome.aspx.designer.cs">
       <DependentUpon>bookHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\categorizedBooks.aspx.cs">
+    <Compile Include="categorizedBooks.aspx.cs">
       <DependentUpon>categorizedBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\categorizedBooks.aspx.designer.cs">
+    <Compile Include="categorizedBooks.aspx.designer.cs">
       <DependentUpon>categorizedBooks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\deleteReview.aspx.cs">
+    <Compile Include="deleteReview.aspx.cs">
       <DependentUpon>deleteReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\deleteReview.aspx.designer.cs">
+    <Compile Include="deleteReview.aspx.designer.cs">
       <DependentUpon>deleteReview.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\editReview.aspx.cs">
+    <Compile Include="editReview.aspx.cs">
       <DependentUpon>editReview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\editReview.aspx.designer.cs">
+    <Compile Include="editReview.aspx.designer.cs">
       <DependentUpon>editReview.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\login.aspx.cs">
+    <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\login.aspx.designer.cs">
+    <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\logout.aspx.cs">
+    <Compile Include="logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\logout.aspx.designer.cs">
+    <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\MyBooks.aspx.cs">
+    <Compile Include="MyBooks.aspx.cs">
       <DependentUpon>MyBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\MyBooks.aspx.designer.cs">
+    <Compile Include="MyBooks.aspx.designer.cs">
       <DependentUpon>MyBooks.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\MyReviews.aspx.cs">
+    <Compile Include="MyReviews.aspx.cs">
       <DependentUpon>MyReviews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\MyReviews.aspx.designer.cs">
+    <Compile Include="MyReviews.aspx.designer.cs">
       <DependentUpon>MyReviews.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\profileView.aspx.cs">
+    <Compile Include="profileView.aspx.cs">
       <DependentUpon>profileView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\profileView.aspx.designer.cs">
+    <Compile Include="profileView.aspx.designer.cs">
       <DependentUpon>profileView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\registerNotice.aspx.cs">
+    <Compile Include="registerNotice.aspx.cs">
       <DependentUpon>registerNotice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\registerNotice.aspx.designer.cs">
+    <Compile Include="registerNotice.aspx.designer.cs">
       <DependentUpon>registerNotice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\registerPage.aspx.cs">
+    <Compile Include="registerPage.aspx.cs">
       <DependentUpon>registerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\registerPage.aspx.designer.cs">
+    <Compile Include="registerPage.aspx.designer.cs">
       <DependentUpon>registerPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\bookDetails.aspx.cs">
+    <Compile Include="bookDetails.aspx.cs">
       <DependentUpon>bookDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\bookDetails.aspx.designer.cs">
+    <Compile Include="bookDetails.aspx.designer.cs">
       <DependentUpon>bookDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -413,32 +392,32 @@
     <Compile Include="Registeration.aspx.designer.cs">
       <DependentUpon>Registeration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\category.aspx.cs">
+    <Compile Include="category.aspx.cs">
       <DependentUpon>category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\category.aspx.designer.cs">
+    <Compile Include="category.aspx.designer.cs">
       <DependentUpon>category.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\feedback.aspx.cs">
+    <Compile Include="feedback.aspx.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\feedback.aspx.designer.cs">
+    <Compile Include="feedback.aspx.designer.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\searchBook.aspx.cs">
+    <Compile Include="searchBook.aspx.cs">
       <DependentUpon>searchBook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\searchBook.aspx.designer.cs">
+    <Compile Include="searchBook.aspx.designer.cs">
       <DependentUpon>searchBook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="user\uploadBookCover.aspx.cs">
+    <Compile Include="uploadBookCover.aspx.cs">
       <DependentUpon>uploadBookCover.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="user\uploadBookCover.aspx.designer.cs">
+    <Compile Include="uploadBookCover.aspx.designer.cs">
       <DependentUpon>uploadBookCover.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

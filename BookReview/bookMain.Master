@@ -26,7 +26,7 @@
 
         <div class="icons">
             <div class="fas fa-search" id="search-btn"></div>
-            <a href="~/user/login.aspx" id="loginLink" runat="server"><div class="fas fa-user" id="btn" runat="server"></div></a>
+            <a href="~/login.aspx" id="loginLink" runat="server"><div class="fas fa-user" id="btn" runat="server"></div></a>
         </div>
         <form  class="search-form" action="searchBook.aspx" method="get">
             <input type="search" name="title" placeholder="search Book" />

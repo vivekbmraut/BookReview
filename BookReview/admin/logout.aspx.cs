@@ -12,7 +12,7 @@ namespace BookReview.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("loginAdmin.aspx");
+            Response.Redirect("Default.aspx");
         }
     }
 }

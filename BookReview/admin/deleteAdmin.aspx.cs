@@ -12,6 +12,8 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             if (Request["aid"] != null)
             {
                 int currAid = Convert.ToInt32(Request["aid"]);

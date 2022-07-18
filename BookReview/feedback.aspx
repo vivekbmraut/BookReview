@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bookMain.Master" AutoEventWireup="true" CodeBehind="feedback.aspx.cs" Inherits="BookReview.user.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link href="../CSS/feedback.css" rel="stylesheet" />
+     <link href="./CSS/feedback.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="middle" runat="server">

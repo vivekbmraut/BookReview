@@ -8,11 +8,11 @@ using System.Web.UI.WebControls;
 using BookReview.Services;
 using Admin = BookReview.Models.Admin;
 
+
 namespace BookReview.admin
 {
-    public partial class adminProfileView : System.Web.UI.Page
+    public partial class myProf : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
             Admin? admn;
@@ -30,10 +30,10 @@ namespace BookReview.admin
         }
         protected void Upload()
         {
-            if(imgFileUpload.HasFile)
+            if (imgFileUpload.HasFile)
             {
                 string fileExt = System.IO.Path.GetExtension(imgFileUpload.FileName);
-                if(fileExt.ToLower()!= ".jpg" && fileExt.ToLower() != ".jpeg" && fileExt.ToLower() != ".jpg" && fileExt.ToLower() != ".png")
+                if (fileExt.ToLower() != ".jpg" && fileExt.ToLower() != ".jpeg" && fileExt.ToLower() != ".jpg" && fileExt.ToLower() != ".png")
                 {
                     imgWarn.Style.Add("display", "block");
                 }
@@ -42,12 +42,12 @@ namespace BookReview.admin
                     var adm = AdminService.Get(Convert.ToInt32(Session["aid"]));
                     string filePath = Server.MapPath("~/admin/profilePictures/");
                     imgFileUpload.SaveAs($"{filePath}{Session["aid"]}{fileExt.ToLower()}");
-                    if(adm!=null)
+                    if (adm != null)
                     {
                         adm.profile_pic = $"{Session["aid"]}{fileExt.ToLower()}";
                         AdminService.Update(adm);
                     }
-                    Response.Redirect("adminProfileView.aspx");
+                    Response.Redirect("myProf.aspx");
                 }
             }
         }

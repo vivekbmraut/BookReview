@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bookMain.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="BookReview.user.login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../CSS/login.css" rel="stylesheet" />
+    <link href="./CSS/login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
      <form id="loginform" action="login.aspx" class="login-form" method="post" runat="server">

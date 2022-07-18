@@ -2,6 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../CSS/addBook.css" rel="stylesheet" />
 </asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="searchAny" runat="server">
+<form action="searchBook.aspx" method="get" class="search-form">
+    <input type="search"  name="title" placeholder="search book by name" />
+    <label for="search-box" class=" fa-solid fa-magnifying-glass"></label>
+    <input type="submit" id="search-box" style="display:none" />
+</form>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="middle" runat="server">
     <div class="book-details">
         <div class="flogo"><i class="fa-solid fa-book"></i>Add Book</div>
@@ -15,13 +23,14 @@
         <input type="text"  class="box" name="authors" required>
       </div>
       <div class="description">
-        <label>Description</label> 
+        <label>Description</label>
         <asp:TextBox TextMode="MultiLine" ID="bookDesc" CssClass="desc" Rows="5" Columns="65" runat="server"></asp:TextBox>
-          <asp:RequiredFieldValidator ErrorMessage="Description Required" CssClass="req-validator" ControlToValidate="bookDesc" Display="Dynamic" runat="server" />
+          
       </div>
       <div class="year">
         <label>Publish Year</label>
-        <input type="text"  class="box" name="year" required>
+        <input type="text" id="pubYear" runat="server" class="box" name="year" required><br>
+          <asp:RegularExpressionValidator ErrorMessage="Numeric 4 digit Year needed" CssClass="req-validator" ControlToValidate="pubYear" Display="Dynamic" ValidationExpression="[\d]{4}" runat="server" />
       </div>
       <div class="categories">
         <label>Category</label>

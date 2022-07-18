@@ -46,7 +46,7 @@ namespace BookReview.html
                 Book? book = BookServices.Get(Convert.ToInt64(Request["bid"]));
                 if (book != null)
                 {
-                    bookCover.Attributes.Add("src", $"../bookCovers/{book.book_cover}");
+                    bookCover.Attributes.Add("src", $"./bookCovers/{book.book_cover}");
                     title.InnerText = book.title;
                     authors.InnerText = book.authors;
                     description.InnerText = book.description;

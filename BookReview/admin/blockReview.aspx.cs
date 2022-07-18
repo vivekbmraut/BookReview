@@ -13,6 +13,8 @@ namespace BookReview.admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["aid"] == null)
+                Response.Redirect("Default.aspx");
             ReviewsService.toggleBlock(Convert.ToInt64(Request["revid"]),Convert.ToInt32(Session["aid"]));
             Response.Redirect($"bookDetailsAdmin.aspx?bid={Request["bid"]}");
         }
