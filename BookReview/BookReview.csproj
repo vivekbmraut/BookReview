@@ -148,7 +148,6 @@
     <Content Include="searchBook.aspx" />
     <Content Include="uploadBookCover.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Registeration.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\addAdmin.aspx.cs">
@@ -385,13 +384,6 @@
       <DependentUpon>bookDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registeration.aspx.cs">
-      <DependentUpon>Registeration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registeration.aspx.designer.cs">
-      <DependentUpon>Registeration.aspx</DependentUpon>
-    </Compile>
     <Compile Include="category.aspx.cs">
       <DependentUpon>category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
