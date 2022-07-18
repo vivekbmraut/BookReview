@@ -23,7 +23,7 @@ namespace BookReview.admin
                 rTotalRev.InnerText = reviewer.total_reviews.ToString();
                 rBlockRev.InnerText = reviewer.blocked_reviews.ToString();
                 userRev.Attributes.Add("href", $"./userReviews.aspx?ruid={reviewer.ruid}");
-                userBk.Attributes.Add("href", $"./userBooks.aspx?ruid={reviewer.ruid}");
+                //userBk.Attributes.Add("href", $"./userBooks.aspx?ruid={reviewer.ruid}");
             }
         }
     }

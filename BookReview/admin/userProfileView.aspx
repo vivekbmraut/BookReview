@@ -22,7 +22,7 @@
       Blocked Reviews:<span id="rBlockRev" runat="server">2</span>
     </div>
       <a href="userReviews.aspx" id="userRev" runat="server"><div class="ed-link">View Reviews</div></a>
-      <a href="userBooks.aspx" id="userBk" runat="server"><div class="ed-link">View Books</div></a>
+      <!--<a href="userBooks.aspx" id="userBk" runat="server"><div class="ed-link">View Books</div></a>-->
       
     </div>
 </asp:Content>

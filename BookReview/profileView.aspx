@@ -23,7 +23,7 @@
       Blocked Reviews:<span id="rBlockRev" runat="server">2</span>
     </div>
       <a href="MyReviews.aspx"><div class="ed-link">View Reviews</div></a>
-      <a href="MyBooks.aspx"><div class="ed-link">View Books</div></a>
+      <!--<a href="MyBooks.aspx"><div class="ed-link">View Books</div></a>-->
       <a href="logout.aspx"><div class="logout">Logout</div></a>
     </div>
     <script src="../JS/profileView.js"></script>
