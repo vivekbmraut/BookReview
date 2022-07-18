@@ -19,7 +19,7 @@
 
         <nav class="navbar">
             <a href="./bookhome.aspx">Home</a>
-            <a href="./addBook.aspx">Add Book</a>
+            <!--<a href="./addBook.aspx">Add Book</a>-->
             <a href="./category.aspx">Categories</a>
         </nav>
 
