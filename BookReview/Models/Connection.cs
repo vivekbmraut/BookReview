@@ -10,7 +10,7 @@ namespace BookReview.Models
     {
         public static MySqlConnection getConnectString()
         {
-            return new MySqlConnection("server=127.0.0.1;uid=Vivek;pwd=IWR1ICR!;database=book_review");
+            return new MySqlConnection("server=127.0.0.1;uid=Vivek;pwd=ADD_YOUR_PASSWORD!;database=book_review");
         }
     }
 }
